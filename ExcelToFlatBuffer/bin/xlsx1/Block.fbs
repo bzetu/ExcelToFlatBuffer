@@ -1,0 +1,28 @@
+namespace GameTable;
+table Table_Block {
+    data : [DRBlock];
+}
+table DRBlock {
+    ///Block表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源Id
+    ResourceId:int;
+    ///资源Id
+    IconId:int;
+    ///类名
+    ClassName:string;
+    ///是否可以参与行消
+    isCanDispel:bool;
+    ///是否可以移动
+    isCanMove:bool;
+    ///
+    InBlockMap:bool;
+    ///特效
+    DispelEffectId:int;
+    ///是否在关卡编辑器中显示
+    isShowInLevelEditor:bool;
+
+}
+root_type Table_Block;

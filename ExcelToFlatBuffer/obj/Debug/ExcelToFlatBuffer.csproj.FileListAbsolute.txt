@@ -1,0 +1,16 @@
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.Properties.Resources.resources
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.Form1.resources
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csproj.GenerateResource.cache
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csproj.CoreCompileInputs.cache
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\ExcelToFlatBuffer.exe.config
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\ExcelToFlatBuffer.exe
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\ExcelToFlatBuffer.pdb
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\NPOI.dll
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\NPOI.OOXML.dll
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\NPOI.OpenXml4Net.dll
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csproj.CopyComplete
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.exe
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.pdb
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\FlatBuffers.dll
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csprojAssemblyReference.cache
