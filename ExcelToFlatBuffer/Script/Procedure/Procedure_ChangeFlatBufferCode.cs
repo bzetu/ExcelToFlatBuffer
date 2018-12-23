@@ -28,21 +28,31 @@ namespace ExcelToFlatBuffer
 
         private bool ChangeCSharpCode(ExcelData excelData,string codePath)
         {
-            string[] lineArry = File.ReadAllLines(codePath);
-            int length = lineArry.Length;
-            string findStr = string.Format(Template.Template_ChangeCode_CSharp, excelData.Name);
             bool executeResult = false;
-            for (int i = 0; i < length; i++)
+            try
             {
-                string line = lineArry[i].Trim();
-                if (line.Equals(findStr))
+                string[] lineArry = File.ReadAllLines(codePath);
+                int length = lineArry.Length;
+                string findStr = string.Format(Template.Template_ChangeCode_CSharp, excelData.Name);
+                
+                for (int i = 0; i < length; i++)
                 {
-                    lineArry[i] = string.Format(Template.Template_ChangeTarget_CSharp, excelData.Name, excelData.Name);
-                    executeResult = true;
-                    break;
+                    string line = lineArry[i].Trim();
+                    if (line.Equals(findStr))
+                    {
+                        lineArry[i] = string.Format(Template.Template_ChangeTarget_CSharp, excelData.Name, excelData.Name);
+                        executeResult = true;
+                        break;
+                    }
                 }
+                File.WriteAllLines(codePath, lineArry);
             }
-            File.WriteAllLines(codePath, lineArry);
+            catch (Exception error)
+            {
+                executeResult = false;
+                Debug.LogError(error.ToString());
+            }
+            
             return executeResult;
         }
 

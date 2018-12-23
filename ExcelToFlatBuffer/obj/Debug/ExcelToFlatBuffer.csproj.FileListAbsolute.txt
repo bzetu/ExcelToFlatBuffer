@@ -14,3 +14,5 @@ D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.e
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.pdb
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\FlatBuffers.dll
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csprojAssemblyReference.cache
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\ICSharpCode.SharpZipLib.xml

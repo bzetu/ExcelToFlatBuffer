@@ -44,6 +44,11 @@ namespace ExcelToFlatBuffer
         {
             if (m_Instance == null)
                 m_Instance = new Procedure();
+
+            Tools.DeleteFilesWithoutFolder(Setting.GenerateByteFilePath);
+            Tools.DeleteFilesWithoutFolder(Setting.GenerateFlatCodePath);
+            //Tools.DeleteFilesWithoutFolder(Setting.ProgramFlatCodeDirPath);
+
             return m_Instance.Procedure_ReadExcel();
         }
 

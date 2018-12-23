@@ -1,0 +1,28 @@
+namespace GameMain;
+table Table_Effectt {
+    data : [DREffectt];
+}
+table DREffectt {
+    ///Effect表ID
+    Id:int;
+    ///备注
+    Desc:string;
+    ///资源Id
+    ResourceId:int;
+    ///类名(绑定脚本的类名)
+    ClassName:string;
+    ///生成时间(MS,-1:循环)
+    KeepTime:int;
+    ///执行时间(MS,-1:循环)
+    RunningTime:int;
+    ///特效触发事件时间
+    TriggerTime:int;
+    ///特效销毁时间
+    DeadTime:int;
+    ///音效Id
+    SoundId:int;
+    ///音效延迟时间(MS)
+    SoundDelay:int;
+
+}
+root_type Table_Effectt;

@@ -14,6 +14,14 @@ namespace ExcelToFlatBuffer
             System.Diagnostics.Process.Start(exePath).WaitForExit();
             Debug.Log("生成flatbuffer序列化文件完毕!");
             var result = MessageBox.Show("生成成功!", "提示", MessageBoxButtons.OK);
+
+            Tools.DeleteFilesWithoutFolder(Setting.ProgramBytesDirPath);
+            Tools.DeleteFilesWithoutFolder(Setting.ProgramFlatCodeDirPath);
+
+            Tools.CopyDirectory(Setting.GenerateFlatCodePath, Setting.ProgramFlatCodeDirPath);
+            Tools.CopyDirectory(Setting.GenerateByteFilePath, Setting.ProgramBytesDirPath);
+
+
             if (result == DialogResult.OK)
             {
                 Program.Exit();

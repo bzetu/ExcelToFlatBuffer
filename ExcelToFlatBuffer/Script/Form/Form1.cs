@@ -76,7 +76,10 @@ namespace ExcelToFlatBuffer
 
         private void OnBtnClick_ExportLog(object sender, EventArgs e)
         {
-            
+            Tools.DeleteFilesWithoutFolder(Setting.ProgramBytesDirPath);
+            Tools.DeleteFilesWithoutFolder(Setting.ProgramFlatCodeDirPath);
+            Tools.CopyDirectory(Setting.GenerateFlatCodePath, Setting.ProgramFlatCodeDirPath);
+            Tools.CopyDirectory(Setting.GenerateByteFilePath, Setting.ProgramBytesDirPath);
         }
 
         private void OnBtnClick_ExcelPath(object sender, EventArgs e)

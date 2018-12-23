@@ -9,7 +9,7 @@ namespace ExcelToFlatBuffer
     public class Template
     {
         public static string Template_Fbs =
-@"namespace GameTable;
+@"namespace GameMain;
 table Table_{0} {{
     data : [DR{1}];
 }}
@@ -36,7 +36,7 @@ public partial struct Table_{1} : IFlatbufferObject , ITable";
 @"using System.Collections;
 using System.Collections.Generic;
 
-namespace GameTable
+namespace GameMain
 {
     using global::System;
     using global::FlatBuffers;
@@ -53,7 +53,7 @@ using System.Collections.Generic;
 using System.Text;
 using FlatBuffers;
 using System.IO;
-using GameTable;
+using GameMain;
 
 namespace CompileCShap
 {{

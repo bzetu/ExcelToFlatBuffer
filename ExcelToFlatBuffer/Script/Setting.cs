@@ -8,7 +8,7 @@ namespace ExcelToFlatBuffer
 {
     public class Setting
     {
-        public static string ExeRootPath{get {return System.IO.Directory.GetCurrentDirectory();}}
+        public static string ExeRootPath { get { return System.IO.Directory.GetCurrentDirectory(); } }
 
         public static string GenerateFbsPath {
             get
@@ -17,7 +17,7 @@ namespace ExcelToFlatBuffer
             }
         }
 
-        
+
         public static string GenerateFlatCodePath
         {
             get
@@ -52,7 +52,18 @@ namespace ExcelToFlatBuffer
             }
         }
 
-        public static string FlatcPath = "C:/Users/jiangcheng_m/Desktop/flatc/flatc.exe";
+        public static string FlatcPath
+        {
+            get
+            {
+                return Path.Combine(ExeRootPath, "flatc.exe");
+            } 
+        }
+
+        public static string ProgramBytesDirPath = @"D:\Client\Client\Assets\StreamingAssets\Tables";
+
+        public static string ProgramFlatCodeDirPath = @"D:\Client\Client\Assets\Plugins\game\Tables";
+
 
     }
 }

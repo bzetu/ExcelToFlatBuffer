@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace GameTable
+namespace GameMain
 {
     using global::System;
     using global::FlatBuffers;

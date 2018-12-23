@@ -63,8 +63,8 @@ namespace CompileCShap
 
         public void Init()
         {
-            Register("GenerateByte_Block", new GenerateByte_Block());
-            Register("GenerateByte_Effect", new GenerateByte_Effect());
+            Register("GenerateByte_Blockk", new GenerateByte_Blockk());
+            Register("GenerateByte_Effectt", new GenerateByte_Effectt());
 
         }
 
