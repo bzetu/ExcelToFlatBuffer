@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4623997-183B-4689-B3F9-83AD5BC455B7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CompileCShap</RootNamespace>
+    <AssemblyName>CompileCShap</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlatBuffers">
+      <HintPath>.\FlatBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Actor.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_AI.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Assets.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Block.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_BlockInitPosition.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_BlockScore.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_BlockType.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Building.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_BuildingLevel.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Chapter.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Charactor.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_CleanRow.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Combo.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_CommonItem.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_ConstConfig.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Cover.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_EagleChickActor.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_EagleChickMap.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_EagleChickMapConfig.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Effect.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Element.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_ElementScore.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_FMODMusic.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_FMODSound.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GameConfig.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GameLevels.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GenerateItem.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GhostGenerate.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GhostType.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GradeConfig.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GuideGroup.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GuideModeGroup.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GuideNewPlayStep.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_GuideStep.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Help.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_IconBase.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_LevelAward.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_LevelEditorActorBornFlag.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_LevelScroll.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_LevelTarget.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MagicBlockPosition.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MapBlockGroup.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MapBlockGroupWeight.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MapElementWeight.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MapLevel.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MapScrollCondition.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MissionList.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MoFangProduceItem.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_MultipleDispleScoreRatio.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Music.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_OpenFunction.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_OpenItem.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_ParkLevel.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Product.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Resource.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Reward.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_SceneClass.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_ScreenAdaptation.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_ShapeTypeItem.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Story.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_StraightEffectStepTime.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_StringDictionary.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Susliks.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Terrain.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_TreasureMapData.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_TreasureMapStory.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_UIForm.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_WoodPeckerType.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateByte_Worker.cs" />
+    <Compile Include="Script\AutoGenerate\BuildCode\GenerateManager.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Actor.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\AI.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Assets.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Block.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\BlockInitPosition.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\BlockScore.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\BlockType.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Building.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\BuildingLevel.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Chapter.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Charactor.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\CleanRow.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Combo.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\CommonItem.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\ConstConfig.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Cover.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\EagleChickActor.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\EagleChickMap.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\EagleChickMapConfig.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Effect.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Element.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\ElementScore.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\FlatBufferTableManager.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\FMODMusic.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\FMODSound.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GameConfig.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GameLevels.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GenerateItem.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GhostGenerate.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GhostType.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GradeConfig.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GuideGroup.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GuideModeGroup.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GuideNewPlayStep.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\GuideStep.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Help.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\IconBase.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\LevelAward.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\LevelEditorActorBornFlag.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\LevelScroll.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\LevelTarget.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MagicBlockPosition.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MapBlockGroup.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MapBlockGroupWeight.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MapElementWeight.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MapLevel.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MapScrollCondition.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MissionList.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MoFangProduceItem.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\MultipleDispleScoreRatio.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Music.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\OpenFunction.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\OpenItem.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\ParkLevel.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Product.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Resource.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Reward.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\SceneClass.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\ScreenAdaptation.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\ShapeTypeItem.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Story.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\StraightEffectStepTime.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\StringDictionary.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Susliks.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Terrain.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\TreasureMapData.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\TreasureMapStory.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\UIForm.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\WoodPeckerType.cs" />
+    <Compile Include="Script\AutoGenerate\FlatCode\Worker.cs" />
+    <Compile Include="Script\GenerateBase.cs" />
+    <Compile Include="Script\ITable.cs" />
+    <Compile Include="Script\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Script\AutoGenerate\Bytes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

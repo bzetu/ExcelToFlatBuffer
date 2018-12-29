@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_Terrain {
+    data : [DRTerrain];
+}
+table DRTerrain {
+    ///Block表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源ID
+    ResourceId:int;
+
+}
+root_type Table_Terrain;

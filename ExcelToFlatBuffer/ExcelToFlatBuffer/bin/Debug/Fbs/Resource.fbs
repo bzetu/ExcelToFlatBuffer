@@ -1,0 +1,16 @@
+namespace GameMain;
+table Table_Resource {
+    data : [DRResource];
+}
+table DRResource {
+    ///资源ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源路径
+    Path:string;
+    ///资源类型(1.sprite;2.texture;3.UI;4.Effect;5.Model;6.Element;7.Animation;8.Sound;9.video)
+    Type:int;
+
+}
+root_type Table_Resource;

@@ -1,0 +1,52 @@
+namespace GameMain;
+table Table_Element {
+    data : [DRElement];
+}
+table DRElement {
+    ///Element表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源ID
+    ResourceId:int;
+    ///图标ID
+    IconId:int;
+    ///投影图标ID
+    ShadowIconId:int;
+    ///下一步图标ID
+    NextIconId:int;
+    ///
+    NextElement:int;
+    ///特效ID(元素执行时播放)
+    EffectId:int;
+    ///收集特效ID
+    CollectEffectId:int;
+    ///元素的类型(这个要跟程序类型一致)
+    TypeId:int;
+    ///类名
+    ClassName:string;
+    ///查找器
+    Finder:string;
+    ///方向
+    Dir:int;
+    ///是否可以携带
+    CanCarry:int;
+    ///方块旋转时本身是否随之旋转
+    IsCanRotate:bool;
+    ///自身销毁时是否允许销毁父级方块
+    IsDestroyParent:bool;
+    ///是否属于携带道具
+    IsCarryItem:bool;
+    ///是否在消除上下行激活
+    IsRemoveActive:bool;
+    ///侧方连着此元素是否算作浮空
+    IsFloat:bool;
+    ///是否可以邻近激活
+    IsCanNearActive:bool;
+    ///生命
+    ElementLife:int;
+    ///触发类型(1.消行或者消行引起的连锁反应时触发;2.方块下落到底部时触发;3.回合结束时触发)
+    TriggerType:int;
+
+}
+root_type Table_Element;

@@ -1,0 +1,40 @@
+namespace GameMain;
+table Table_WoodPeckerType {
+    data : [DRWoodPeckerType];
+}
+table DRWoodPeckerType {
+    ///WoodPeckerType表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///啄木鸟的生成方式 0-总数量 1-回合
+    Type:int;
+    ///啄木鸟的总数量 -1 表示不计算幽灵的总数量
+    TotalNum:int;
+    ///总回合数
+    TotalRoundNum:int;
+    ///第一次出生的数量
+    FirstBirthNum:int;
+    ///数量类型首次生成回合数
+    TotalByFirstRoundNum:int;
+    ///进入关卡出生的数量
+    EnterBirthCount:int;
+    ///位置分布
+    EnterBirthPositionDistribution:string;
+    ///第一次出生的颜色
+    FirstBirthColor:string;
+    ///各个颜色啄木鸟的总数
+    EveryGhostNum:string;
+    ///啄木鸟生成权重
+    GhostGenerateWeight:string;
+    ///生成啄木鸟的回合
+    GenerateRound:string;
+    ///每个回合生成的啄木鸟数量
+    GenerateGhostCount:string;
+    ///"每回合啄木鸟的数量分布（青,橙,靛,黄,红,紫,绿）"
+    GhostDistribution:string;
+    ///滚屏后类型Id
+    NextScreenTypeId:int;
+
+}
+root_type Table_WoodPeckerType;

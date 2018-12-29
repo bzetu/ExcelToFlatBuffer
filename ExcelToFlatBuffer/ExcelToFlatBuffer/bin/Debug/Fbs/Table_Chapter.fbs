@@ -1,0 +1,32 @@
+namespace GameMain;
+table Table_Chapter {
+    data : [DRChapter];
+}
+table DRChapter {
+    ///章节表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///章节名称
+    Name:string;
+    ///关卡数量
+    LevelSum:int;
+    ///X轴拖动的最大值
+    DragRangXMax:float;
+    ///X轴拖动的最小值
+    DragRangXMin:float;
+    ///Z轴拖动的最大值
+    DragRangZMax:float;
+    ///Z轴拖动的最小值
+    DragRangZMin:float;
+    ///相机视野最大值
+    PinchViewRangMax:float;
+    ///相机视野最小值
+    PinchViewRangMin:float;
+    ///场景的拖动速度
+    DragSpeed:float;
+    ///场景的缩放速度
+    PichSpeed:float;
+
+}
+root_type Table_Chapter;

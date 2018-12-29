@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_CleanRow {
+    data : [DRCleanRow];
+}
+table DRCleanRow {
+    ///CleanRow表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///生成的类型（-1-无效 1-飞机 2-魔法棒 3-扭蛋）
+    TypeId:int;
+    ///特效Id
+    EffectId:int;
+    ///道具作用后生产的Id(这个需要根据具体的功能填写id)
+    GenerateId:int;
+
+}
+root_type Table_CleanRow;

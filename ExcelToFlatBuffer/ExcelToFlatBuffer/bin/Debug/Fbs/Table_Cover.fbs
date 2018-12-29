@@ -1,0 +1,46 @@
+namespace GameMain;
+table Table_Cover {
+    data : [DRCover];
+}
+table DRCover {
+    ///遮盖物表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源ID
+    ResourceId:int;
+    ///图标ID
+    IconId:[int];
+    ///投影图标ID
+    ShadowIconId:[int];
+    ///预览图标ID
+    PreviewIconId:[int];
+    ///通关目标图标ID
+    CollectIcon:int;
+    ///特效ID(元素执行时播放)
+    EffectId:int;
+    ///收集特效ID
+    CollectEffectId:int;
+    ///类名
+    ClassName:string;
+    ///查找器
+    Finder:string;
+    ///方块旋转时本身是否随之旋转
+    IsCanRotate:bool;
+    ///是否属于携带道具
+    IsCarryItem:bool;
+    ///是否在消除上下行激活
+    IsRemoveActive:bool;
+    ///侧方连着此元素是否算作浮空
+    IsFloat:bool;
+    ///自身销毁时是否销毁父节点
+    IsDestroyParent:bool;
+    ///是否属于携带道具
+    IsCarry:bool;
+    ///是否可以邻近激活
+    IsCanNearActive:bool;
+    ///生命最大值
+    MaxLife:int;
+
+}
+root_type Table_Cover;

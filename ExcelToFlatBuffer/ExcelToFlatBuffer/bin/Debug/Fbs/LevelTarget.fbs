@@ -1,0 +1,20 @@
+namespace GameMain;
+table Table_LevelTarget {
+    data : [DRLevelTarget];
+}
+table DRLevelTarget {
+    ///目标ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///通关类型（元素=0 消行=1 基础块=2 覆盖类=3 生产类=4）
+    Type:int;
+    ///元素Id（Element表)
+    ElementId:int;
+    ///通关数量
+    Count:int;
+    ///选取概率(单个目标的选中概率等于该目标的权重/所有目标的权重和）
+    Rate:int;
+
+}
+root_type Table_LevelTarget;

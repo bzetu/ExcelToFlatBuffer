@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_BlockType {
+    data : [DRBlockType];
+}
+table DRBlockType {
+    ///BlockType表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源路径
+    AssetName:string;
+
+}
+root_type Table_BlockType;

@@ -1,0 +1,50 @@
+namespace GameMain;
+table Table_GuideGroup {
+    data : [DRGuideGroup];
+}
+table DRGuideGroup {
+    ///GuideSequence表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///前序引导Id
+    PreId:int;
+    ///后续Id
+    NextId:int;
+    ///开启条件判断
+    OpenCondition:int;
+    ///完成条件条件参数（0-消除三行的标记 1-四行的标记）
+    ConditionParam:int;
+    ///开启条件完成时的后续id
+    ConditionCompoleteNextId:int;
+    ///引导id序列
+    Sequence:string;
+    ///分支0触发事件（0-通关成功事件）
+    BranchEvent0:int;
+    ///引导id序列
+    Branch0:string;
+    ///分支1触发事件（1-通关失败事件）
+    BranchEvent1:int;
+    ///失败分支
+    Branch1:string;
+    ///是否提前引导（0-提前引导 1-是否接受提前引导结果）
+    ExtendEvent:int;
+    ///扩展分支（消除3行或是4行）
+    Extend:string;
+    ///扩展引导的id序列
+    ExtendSequence:string;
+    ///提前完成消三行（id是GuideGroup表的id）
+    Result0:int;
+    ///提前完成消四行
+    Result1:int;
+    ///提前完成消三行和消四行
+    Result2:int;
+    ///完成后记录的id
+    Complete:int;
+    ///是否开启键位/手势 （-1不关心 1-按键 2-手势）
+    OpenKeyOrGesture:int;
+    ///是否打开道具（0 -未开启 1-开启）
+    OpenItem:int;
+
+}
+root_type Table_GuideGroup;

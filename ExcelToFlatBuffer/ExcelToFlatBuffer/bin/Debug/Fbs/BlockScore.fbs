@@ -1,0 +1,16 @@
+namespace GameMain;
+table Table_BlockScore {
+    data : [DRBlockScore];
+}
+table DRBlockScore {
+    ///Block表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///基础得分
+    BaseScore:int;
+    ///颜色
+    Color:string;
+
+}
+root_type Table_BlockScore;

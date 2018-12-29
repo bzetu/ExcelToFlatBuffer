@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_MultipleDispleScoreRatio {
+    data : [DRMultipleDispleScoreRatio];
+}
+table DRMultipleDispleScoreRatio {
+    ///场景ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///多行消除的奖励积分倍率
+    Ratio:float;
+
+}
+root_type Table_MultipleDispleScoreRatio;

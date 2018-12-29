@@ -1,0 +1,34 @@
+namespace GameMain;
+table Table_MapLevel {
+    data : [DRMapLevel];
+}
+table DRMapLevel {
+    ///MapLevel表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///名称
+    Name:string;
+    ///场景中关卡的X轴坐标
+    PosX:float;
+    ///场景中关卡的Y轴坐标
+    PosY:float;
+    ///场景中关卡的Z轴坐标
+    PosZ:float;
+    ///场景中关卡的X轴旋转值
+    RotX:float;
+    ///场景中关卡的Y轴旋转值
+    RotY:float;
+    ///场景中关卡的Z轴旋转值（配置编辑器中LevelEditor场景保存运行后自动生成数据，需手动覆盖此列之前所有数据）
+    RotZ:float;
+    ///"预设类型（对应编辑器中1--level1,2--level2,3--level3,4--level4）"
+    LevelType:int;
+    ///元素纹理，配置图片名称
+    IMG:string;
+    ///元素图片大小比例
+    IMGSCALE:float;
+    ///"关卡移动类型（0--normal,1--Ladder,2--Slide,3--Gift）"
+    LevelItemType:int;
+
+}
+root_type Table_MapLevel;

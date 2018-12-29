@@ -1,0 +1,20 @@
+namespace GameMain;
+table Table_GuideModeGroup {
+    data : [DRGuideModeGroup];
+}
+table DRGuideModeGroup {
+    ///GuideModeGroup表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///手势+按键
+    Mode0:int;
+    ///组id
+    GroupId0:int;
+    ///按键+手势
+    Mode1:int;
+    ///组id
+    GroupId1:int;
+
+}
+root_type Table_GuideModeGroup;

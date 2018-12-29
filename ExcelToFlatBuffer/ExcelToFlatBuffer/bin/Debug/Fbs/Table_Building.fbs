@@ -1,0 +1,34 @@
+namespace GameMain;
+table Table_Building {
+    data : [DRBuilding];
+}
+table DRBuilding {
+    ///ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///任务聚焦的摄像机位置（X、Y、Z）
+    PositionX:float;
+    ///
+    PositionY:float;
+    ///
+    PositionZ:float;
+    ///所属园区（暂无用处)
+    Area:int;
+    ///状态的剧情进度0
+    StateStoryProgress:[int];
+    ///状态的模型Id0
+    StateModel:[int];
+    ///模型1(Resource表ID）
+    Model:[int];
+    ///更换模型花费金币
+    ChangeCost:int;
+    ///模型1Icon
+    Icon:[int];
+    ///模型1名字
+    Name:[string];
+    ///工人刷新的初始位置1
+    WorkerPosition:[string];
+
+}
+root_type Table_Building;

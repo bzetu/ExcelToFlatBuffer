@@ -1,0 +1,22 @@
+namespace GameMain;
+table Table_Assets {
+    data : [DRAssets];
+}
+table DRAssets {
+    ///Asset表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///TypeId(1.prefab)
+    Type:int;
+    ///是否在场景加载时预先分配对象到对象池
+    PreAllocate:bool;
+    ///预先分配的对象个数，如果不预先分配的话填0
+    PreAllocateCount:int;
+    ///资源在资源表（Resource.txt）中的Id，没有时填-1
+    ResourceId:int;
+    ///资源路径
+    AssetName:string;
+
+}
+root_type Table_Assets;

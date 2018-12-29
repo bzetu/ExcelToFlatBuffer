@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_Product {
+    data : [DRProduct];
+}
+table DRProduct {
+    ///Product表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源ID
+    IconId:int;
+
+}
+root_type Table_Product;

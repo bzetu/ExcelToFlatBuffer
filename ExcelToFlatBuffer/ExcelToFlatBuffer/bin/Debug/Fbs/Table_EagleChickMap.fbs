@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_EagleChickMap {
+    data : [DREagleChickMap];
+}
+table DREagleChickMap {
+    ///ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///第1列
+    Column:[int];
+
+}
+root_type Table_EagleChickMap;

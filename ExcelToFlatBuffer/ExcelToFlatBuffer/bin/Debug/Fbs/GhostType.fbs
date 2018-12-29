@@ -1,0 +1,38 @@
+namespace GameMain;
+table Table_GhostType {
+    data : [DRGhostType];
+}
+table DRGhostType {
+    ///GhostType表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///幽灵的生成方式 0-总数量 1-回合
+    Type:int;
+    ///幽灵的总数量 -1 表示不计算幽灵的总数量
+    TotalNum:int;
+    ///总回合数
+    TotalRoundNum:int;
+    ///第一次出生的数量
+    FirstBirthNum:int;
+    ///进入关卡出生的数量
+    EnterBirthCount:int;
+    ///位置分布
+    EnterBirthPositionDistribution:string;
+    ///第一次出生的颜色
+    FirstBirthColor:string;
+    ///各个颜色幽灵的总数
+    EveryGhostNum:string;
+    ///幽灵生成表Id
+    GhostGenerateId:string;
+    ///生成幽灵的回合
+    GenerateRound:string;
+    ///每个回合生成的幽灵数量
+    GenerateGhostCount:string;
+    ///"每回合幽灵的数量分布（青,橙,靛,黄,红,紫,绿）"
+    GhostDistribution:string;
+    ///滚屏后类型Id
+    NextScreenTypeId:int;
+
+}
+root_type Table_GhostType;

@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_ScreenAdaptation {
+    data : [DRScreenAdaptation];
+}
+table DRScreenAdaptation {
+    ///OpenItem表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///手机型号
+    PhoneModel:string;
+    ///手机型号
+    IPhoneModel:string;
+    ///是否为刘海屏
+    IsBangsScreen:bool;
+
+}
+root_type Table_ScreenAdaptation;

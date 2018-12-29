@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_GenerateItem {
+    data : [DRGenerateItem];
+}
+table DRGenerateItem {
+    ///GenerateItem表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///在Entity表中的Id
+    EntityId:int;
+
+}
+root_type Table_GenerateItem;

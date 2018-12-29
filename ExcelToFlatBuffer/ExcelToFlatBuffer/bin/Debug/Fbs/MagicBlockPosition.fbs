@@ -1,0 +1,16 @@
+namespace GameMain;
+table Table_MagicBlockPosition {
+    data : [DRMagicBlockPosition];
+}
+table DRMagicBlockPosition {
+    ///ShapeType表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///X轴坐标
+    PosX:float;
+    ///Y轴坐标
+    PosY:float;
+
+}
+root_type Table_MagicBlockPosition;

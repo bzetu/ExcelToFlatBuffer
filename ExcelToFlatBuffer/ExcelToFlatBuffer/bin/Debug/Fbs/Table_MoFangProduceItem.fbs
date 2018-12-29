@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_MoFangProduceItem {
+    data : [DRMoFangProduceItem];
+}
+table DRMoFangProduceItem {
+    ///生成道具Id
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///道具1（|道具ID:道具权重|0:1000表示道具表的0号道具和它占权重比1000）
+    ItemWeight:[string];
+
+}
+root_type Table_MoFangProduceItem;

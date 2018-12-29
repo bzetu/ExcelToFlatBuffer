@@ -1,0 +1,22 @@
+namespace GameMain;
+table Table_UIForm {
+    data : [DRUIForm];
+}
+table DRUIForm {
+    ///UIForm表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///界面名称
+    UIName:string;
+    ///界面prefab资源ID
+    ResourceId:int;
+    ///
+    UIGroupName:string;
+    ///
+    AllowMultiInstance:bool;
+    ///
+    PauseCoveredUIForm:bool;
+
+}
+root_type Table_UIForm;

@@ -1,0 +1,16 @@
+namespace GameMain;
+table Table_LevelScroll {
+    data : [DRLevelScroll];
+}
+table DRLevelScroll {
+    ///LevelScroll表ID
+    Id:int;
+    ///程序不读，关卡分屏描述，id = 关卡Id+屏序号
+    Desc:string;
+    ///关卡滚屏名
+    Name:string;
+    ///滚屏条件组，并且用&连接，或用|连接
+    ConditionGroup:string;
+
+}
+root_type Table_LevelScroll;

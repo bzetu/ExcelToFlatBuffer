@@ -1,0 +1,24 @@
+namespace GameMain;
+table Table_Reward {
+    data : [DRReward];
+}
+table DRReward {
+    ///奖励ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///道具名称
+    Name:string;
+    ///金币
+    CoinCount:int;
+    ///钻石
+    DiamondCount:int;
+    ///体力
+    StaminaCount:int;
+    ///道具ID（CommonItem表ID)
+    ItemId:[int];
+    ///数量
+    Count:[int];
+
+}
+root_type Table_Reward;

@@ -1,0 +1,20 @@
+namespace GameMain;
+table Table_EagleChickMapConfig {
+    data : [DREagleChickMapConfig];
+}
+table DREagleChickMapConfig {
+    ///关卡ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///母鸡初始位置（暂时废弃）
+    HenRootPos:string;
+    ///小鹰总数
+    EyasTotalCount:int;
+    ///小鹰同时出现的最大数量
+    EyasMaxCount:int;
+    ///小鹰开始出生的位置，需要和出生点对应，不填默认为所有出生点都出生
+    EyasStartPosGroup:string;
+
+}
+root_type Table_EagleChickMapConfig;

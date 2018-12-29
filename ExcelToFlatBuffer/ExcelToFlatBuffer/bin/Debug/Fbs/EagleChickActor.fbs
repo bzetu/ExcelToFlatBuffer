@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_EagleChickActor {
+    data : [DREagleChickActor];
+}
+table DREagleChickActor {
+    ///场景ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///第1列（整体就是一个16*9的棋盘格）
+    Column:[int];
+
+}
+root_type Table_EagleChickActor;

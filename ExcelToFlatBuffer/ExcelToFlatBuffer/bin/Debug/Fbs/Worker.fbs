@@ -1,0 +1,26 @@
+namespace GameMain;
+table Table_Worker {
+    data : [DRWorker];
+}
+table DRWorker {
+    ///ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///解锁时需要的建筑等级要求
+    NeedBuildLevel:int;
+    ///解锁工人时花费的金币数
+    BuyCost:int;
+    ///产出加成（金币/小时）
+    Income:int;
+    ///人物形象
+    Person:int;
+    ///AI行为
+    AI:int;
+    ///工人名字
+    Name:string;
+    ///状态的模型Id
+    Model:int;
+
+}
+root_type Table_Worker;

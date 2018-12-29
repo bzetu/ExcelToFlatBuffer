@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_TreasureMapStory {
+    data : [DRTreasureMapStory];
+}
+table DRTreasureMapStory {
+    ///ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///剧情内容
+    Story:string;
+
+}
+root_type Table_TreasureMapStory;

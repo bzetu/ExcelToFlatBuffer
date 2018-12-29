@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_OpenItem {
+    data : [DROpenItem];
+}
+table DROpenItem {
+    ///OpenItem表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///道具ID
+    ItemID:int;
+    ///道具开放时赠送数量（99 表示本关无限使用）
+    FreeCount:int;
+    ///是否播放开锁的动画
+    IsHaveAnimation:bool;
+
+}
+root_type Table_OpenItem;

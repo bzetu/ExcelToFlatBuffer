@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_ElementScore {
+    data : [DRElementScore];
+}
+table DRElementScore {
+    ///Element表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///基础得分
+    BaseScore:int;
+
+}
+root_type Table_ElementScore;

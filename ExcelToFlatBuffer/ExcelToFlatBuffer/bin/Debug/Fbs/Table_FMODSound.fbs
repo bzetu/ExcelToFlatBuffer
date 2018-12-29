@@ -1,0 +1,24 @@
+namespace GameMain;
+table Table_FMODSound {
+    data : [DRFMODSound];
+}
+table DRFMODSound {
+    ///Sound表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源ID
+    ResourceID:int;
+    ///
+    Priority:int;
+    ///
+    Loop:bool;
+    ///
+    Volume:float;
+    ///
+    SpatialBlend:float;
+    ///
+    MaxDistance:float;
+
+}
+root_type Table_FMODSound;

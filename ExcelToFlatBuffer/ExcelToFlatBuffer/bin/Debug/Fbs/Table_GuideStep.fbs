@@ -1,0 +1,120 @@
+namespace GameMain;
+table Table_GuideStep {
+    data : [DRGuideStep];
+}
+table DRGuideStep {
+    ///Guide表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///前序id
+    PreId:int;
+    ///后续id
+    NextId:string;
+    ///新手引导or功能引导
+    FunctionOrNewPlayer:int;
+    ///类型（0-UI 1-手势 2-引导界面上的UI 3-事件（飞机泡泡糖和魔方使用） 4-监听目标 5-使用道具 6-按键指引 7-选择键位指引 8-监听关闭按钮）
+    GuideType:int;
+    ///事件type定义（0-小方块 2-小锤子 3-打开ui 4-立即生效 5-到达底部事件 6-按键功能开启 7-自定义按键开启）
+    GuideTypeParam:int;
+    ///是否关闭界面（1关闭 0不关闭）
+    IsHideUI:int;
+    ///0-关闭所有手势 1-打开
+    OnOrOffAllGestures:int;
+    ///是否需要暂停方块的下落
+    StopDrop:bool;
+    ///遮挡的类型（0-黑底扣动 1-白底高亮）
+    MaskType:int;
+    ///抠图的形状 -1 不扣图  0-矩形 1-圆型 2-高亮引导区域
+    MaskShape:int;
+    ///是否需要扣动的动画
+    IsHaveMaskAnimation:bool;
+    ///引导开启的条件(-1-不需要条件 1-方块完全出现并下落一格 2-成功 3-失败 4-生成飞机 5-生成泡泡糖 6-生成魔方 7-收集通关目标 8-生成道具 9-显示目标点)
+    OpenCondition:int;
+    ///音乐id
+    SoundId:int;
+    ///0-操作类型 1-强制 2-非强制
+    OperationType:int;
+    ///是否自动关闭
+    IsAutoClose:bool;
+    ///自动关闭的时间
+    AutoCloseTime:float;
+    ///是否有对话框
+    IsHaveDialog:bool;
+    ///对话框的方向（0-左侧 1-右侧）
+    DialogDirection:int;
+    ///对话框延时
+    DialogDelayTime:float;
+    ///页数
+    DialogPageCount:int;
+    ///对话框文字（这里需要配置成字典表）
+    DialogText:[string];
+    ///对话框的坐标
+    DialogPos:string;
+    ///是否有继续图片
+    IsHaveContinueImage:bool;
+    ///继续坐标
+    ContinuePosition:string;
+    ///是否有箭头
+    IsHaveArrow:bool;
+    ///箭头坐标
+    ArrowPosition:string;
+    ///箭头旋转角度
+    ArrowRotate:int;
+    ///箭头出现时间
+    ArrowDelayTime:float;
+    ///是否有npc
+    IsHaveNpc:bool;
+    ///是否有伴随动画
+    IsHaveNpcAnimation:bool;
+    ///npc选择角度
+    NpcRotate:int;
+    ///npc的状态（0-对话 1-鼓掌 2-哭泣）
+    NpcType:int;
+    ///NPC坐标
+    NpcPosition:string;
+    ///是否显示目标投影
+    IsShowTargetShadow:bool;
+    ///延时
+    ShowShadowDelayTime:float;
+    ///投影方向（0-左 1-右 2-下 3-旋转）
+    ShowTargetDirection:int;
+    ///手势，箭头动画
+    IsHaveFingerAnimation:bool;
+    ///错误手势提示文字
+    ErrorGestureText:string;
+    ///错误提示音
+    ErrorSoundId:int;
+    ///小手动画（点，按，滑动）-0 播放键位动画-1  ui小手指引-2
+    Animation:int;
+    ///小手选择角度
+    FingerRotate:int;
+    ///点击 0 or移动 1or长按 2 下滑 3
+    ClickOrMove:int;
+    ///手势动画延时时间
+    GestureDelayTime:float;
+    ///3d坐标(0)or UI坐标(1)
+    PositionType:int;
+    ///手势滑动动画坐标
+    GestureAnimation:string;
+    ///完成条件（0-点击任意位置完成 1-手势 2-界面按钮 3-自由操作 4-加速）
+    CompleteCondition:int;
+    ///手势Id（ 0-左 1-右 2-一键到底 3-加速 4-旋转 5-点滑 ）
+    GestureId:string;
+    ///目标位置
+    TargetPos:string;
+    ///生成形状id
+    GenerateAssembleCount:int;
+    ///GuideStepResult
+    ResultId:string;
+    ///恢复方块生成
+    Resume:int;
+    ///携带参数
+    CarryParam:string;
+    ///射线
+    Raycaster:int;
+    ///等待程序主动切换下一步
+    WaitActiveNextStep:bool;
+
+}
+root_type Table_GuideStep;

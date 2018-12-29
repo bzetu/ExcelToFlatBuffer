@@ -1,0 +1,24 @@
+namespace GameMain;
+table Table_BuildingLevel {
+    data : [DRBuildingLevel];
+}
+table DRBuildingLevel {
+    ///ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///建筑ID（building表中的ID）
+    BuildingId:int;
+    ///建筑等级
+    BuildLevel:int;
+    ///升级花费金币
+    CostGold:int;
+    ///产出加成（0.1表示10%)
+    Income:float;
+    ///游乐园等级限制(达到对应等级建筑才可以升级）
+    Limit:int;
+    ///建筑名字
+    Name:string;
+
+}
+root_type Table_BuildingLevel;

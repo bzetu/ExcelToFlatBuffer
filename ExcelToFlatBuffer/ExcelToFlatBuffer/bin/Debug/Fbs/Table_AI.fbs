@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_AI {
+    data : [DRAI];
+}
+table DRAI {
+    ///AI表ID
+    Id:int;
+    ///备注
+    Desc:string;
+    ///类型
+    Type:int;
+    ///
+    ItemId:int;
+    ///
+    Weight:int;
+
+}
+root_type Table_AI;

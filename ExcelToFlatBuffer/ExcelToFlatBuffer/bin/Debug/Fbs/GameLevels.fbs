@@ -1,0 +1,52 @@
+namespace GameMain;
+table Table_GameLevels {
+    data : [DRGameLevels];
+}
+table DRGameLevels {
+    ///场景ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///关卡开启条件1
+    OpenCondition:[int];
+    ///通关步数
+    Step:int;
+    ///通关条件1（LevelTarget表的通关目标）
+    Condition:[int];
+    ///奖励id
+    BonusId:int;
+    ///附加类型（实体ID）
+    AddEntityID:int;
+    ///关卡类型(具体的类型要跟程序的一致：-1无效，1幽灵)
+    LevelType:int;
+    ///地图类型(1.经典地图(不支持浮空下落);2.固定地图;3.竖屏滑动地图;4.横屏滑动地图;5.母鸡捉小鹰地图 6.幽灵，8.啄木鸟，10地鼠)
+    MapType:int;
+    ///游戏类型（当maptype列为6幽灵时，gamemode列对应ghosttype表中的ID
+    GameMode:int;
+    ///默认是否开启速度
+    DefaultOpenSpeed:bool;
+    ///方块下落速度(MS)
+    FallingSpeed:int;
+    ///GuideModeGroup表id 引导id组
+    GuideGroupId:int;
+    ///新玩法引导ID
+    GuideNewPlayStepID:int;
+    ///引导帮助ID
+    GuideHelpId:int;
+    ///棋盘背景图
+    Background:string;
+    ///通关目标提示
+    LevelTargetMsg:string;
+    ///新功能开启Id
+    OpenFunctionID:int;
+    ///OpenItem表 ID（开启后之后默认的关卡都开启）
+    OpenItem:string;
+    ///魔方生成道具ID
+    MoFangProduceItemId:int;
+    ///是否为免费使用
+    BuyStepFreeofcharge:bool;
+    ///战前界面玩法背景图
+    BackImgId:int;
+
+}
+root_type Table_GameLevels;

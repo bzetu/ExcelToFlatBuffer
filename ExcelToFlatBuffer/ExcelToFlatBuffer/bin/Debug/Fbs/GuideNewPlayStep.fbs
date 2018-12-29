@@ -1,0 +1,42 @@
+namespace GameMain;
+table Table_GuideNewPlayStep {
+    data : [DRGuideNewPlayStep];
+}
+table DRGuideNewPlayStep {
+    ///步骤ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///引导类型(1.动画;2.道具;3.目标;4.元素;5.浮空)
+    GuideType:int;
+    ///"延迟时间(毫秒,弹出引导界面)"
+    DelayShow:int;
+    ///"延迟时间(毫秒,弹出确认按钮)"
+    DelayConfirm:int;
+    ///引导目标(1.动画-界面ID;4.元素-元素ID)
+    Target:int;
+    ///下一步
+    NextStep:int;
+    ///是否有道具开放(1:有 0:没有)
+    IsPropOpen:int;
+    ///目标位置
+    TargetPosition:string;
+    ///对话框位置
+    DialogPosition:string;
+    ///手指位置
+    ArrowPosition:string;
+    ///对话框朝向(0-左侧 1-右侧)
+    DialogDirection:int;
+    ///对话框文字
+    DialogText:string;
+    ///新界面名称
+    TitleText:string;
+    ///引导类型为2时生效，数值表示第几回合触发引导
+    GuideRoundNum:int;
+    ///"预引导(FALSE-非预引导 TRUE-预引导,第一个方块出来前引导)"
+    IsPreGuide:bool;
+    ///仅引导一次(TRUE:引导一次 FALSE:出现即引导)
+    GuideOneTime:bool;
+
+}
+root_type Table_GuideNewPlayStep;

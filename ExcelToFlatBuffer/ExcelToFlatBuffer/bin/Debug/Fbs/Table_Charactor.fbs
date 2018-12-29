@@ -1,0 +1,20 @@
+namespace GameMain;
+table Table_Charactor {
+    data : [DRCharactor];
+}
+table DRCharactor {
+    ///ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///状态的模型Id
+    Model:int;
+    ///角色初始位置（X、Y、Z）
+    PositionX:float;
+    ///
+    PositionY:float;
+    ///
+    PositionZ:float;
+
+}
+root_type Table_Charactor;

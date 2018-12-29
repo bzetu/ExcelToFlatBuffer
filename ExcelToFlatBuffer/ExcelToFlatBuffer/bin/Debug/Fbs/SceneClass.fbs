@@ -1,0 +1,46 @@
+namespace GameMain;
+table Table_SceneClass {
+    data : [DRSceneClass];
+}
+table DRSceneClass {
+    ///场景ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///资源名称
+    ResName:string;
+    ///类型(-1登陆等无关场景，0主城，1战斗场景)
+    AtkType:int;
+    ///类型(-1客户端场景，0主城，1副本场景)
+    Type:int;
+    ///服务器用脚本ID（客户端场景填-1，无脚本的填-1）
+    ScriptID:int;
+    ///阻挡文件(服务器使用)
+    Obstacle:string;
+    ///场景内玩家数量上限
+    MaxPlayer:int;
+    ///场景地图宽度
+    SceneMapLogicWidth:int;
+    ///背景音乐ID
+    BGMusic:int;
+    ///小地图的名称
+    MiniMapName:string;
+    ///展开小地图的名称
+    BigMiniMapName:string;
+    ///主摄像机设置ID
+    CameraSettingID:int;
+    ///投影参数设置
+    ShadowsSettingID:int;
+    ///摄像机移动最小X
+    MinX:float;
+    ///摄像机移动最大X
+    MaxX:float;
+    ///摄像机移动最小Z
+    MinZ:float;
+    ///摄像机移动最大Z
+    MaxZ:float;
+    ///资源ID组（String）
+    AssetGroup:string;
+
+}
+root_type Table_SceneClass;

@@ -1,0 +1,22 @@
+namespace GameMain;
+table Table_MapScrollCondition {
+    data : [DRMapScrollCondition];
+}
+table DRMapScrollCondition {
+    ///MapScrollCondition表ID
+    Id:int;
+    ///程序不读，滚屏条件自定义
+    Desc:string;
+    ///条件类型，1.收集，2.剩余行
+    ConditionType:int;
+    ///收集物类型(1.元素 2.覆盖物 -1不填)
+    CollectType:int;
+    ///"收集元素ID（|）个数，多个逗号（,）隔开，不填-1"
+    ElmentID_Count_Group:string;
+    ///滚屏行数阈值Type2时生效
+    LowCellNumber:int;
+    ///收集类型颜色块
+    ColorBlock:int;
+
+}
+root_type Table_MapScrollCondition;

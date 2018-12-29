@@ -1,0 +1,22 @@
+namespace GameMain;
+table Table_Help {
+    data : [DRHelp];
+}
+table DRHelp {
+    ///帮助ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///帮助类型(1.玩法;2.目标;3.元素;4.道具)
+    Type:int;
+    ///名称
+    Name:string;
+    ///图标资源ID
+    Icon:int;
+    ///动画资源ID
+    Animation:int;
+    ///描述
+    Description:string;
+
+}
+root_type Table_Help;

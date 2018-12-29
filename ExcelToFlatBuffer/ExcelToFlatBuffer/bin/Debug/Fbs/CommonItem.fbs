@@ -1,0 +1,20 @@
+namespace GameMain;
+table Table_CommonItem {
+    data : [DRCommonItem];
+}
+table DRCommonItem {
+    ///物品ID（暂时没有考虑分段，等后续策划设计时再进行id分段）
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///图标资源ID
+    IconId:int;
+    ///图标（ps：等后续使用时自行修改吧。资源路径问题应该也会同意配置的。）
+    Icon:string;
+    ///特效Id
+    EffectId:int;
+    ///显示类型（0-道具栏 1-关卡信息）
+    ShowType:int;
+
+}
+root_type Table_CommonItem;

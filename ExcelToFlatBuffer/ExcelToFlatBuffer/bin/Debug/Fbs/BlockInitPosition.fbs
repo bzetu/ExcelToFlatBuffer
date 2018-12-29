@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_BlockInitPosition {
+    data : [DRBlockInitPosition];
+}
+table DRBlockInitPosition {
+    ///BlockInitPosition表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///旋转0度的位置
+    InitPos:[string];
+
+}
+root_type Table_BlockInitPosition;

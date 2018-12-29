@@ -1,0 +1,24 @@
+namespace GameMain;
+table Table_OpenFunction {
+    data : [DROpenFunction];
+}
+table DROpenFunction {
+    ///OpenFunction表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///功能资源
+    Icon:string;
+    ///功能名
+    FunctionName:string;
+    ///游乐园等级0 关卡通关等级1
+    OpenCondition:int;
+    ///开启参数
+    ConditionParam:int;
+    ///自动关闭时间
+    CloseTime:float;
+    ///完成后记录的id
+    CompleteId:int;
+
+}
+root_type Table_OpenFunction;

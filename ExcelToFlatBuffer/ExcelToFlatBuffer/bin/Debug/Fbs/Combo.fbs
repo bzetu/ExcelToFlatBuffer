@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_Combo {
+    data : [DRCombo];
+}
+table DRCombo {
+    ///ID, Combo次数
+    Id:int;
+    ///程序不读
+    Des:string;
+    ///Msg
+    Msg:string;
+
+}
+root_type Table_Combo;

@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_MapBlockGroupWeight {
+    data : [DRMapBlockGroupWeight];
+}
+table DRMapBlockGroupWeight {
+    ///关卡ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///I块
+    BlockGroupWeight:[string];
+    ///luck值影响下落方块组#每一点luck产生的权重
+    LuckImpactDrop:string;
+    ///第X步#luck到达值#必出Y组 |分隔组间
+    LuckCertainDrop:string;
+
+}
+root_type Table_MapBlockGroupWeight;

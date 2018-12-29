@@ -1,0 +1,24 @@
+namespace GameMain;
+table Table_GameConfig {
+    data : [DRGameConfig];
+}
+table DRGameConfig {
+    ///GameConfig表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///配置参数
+    Param0:int;
+    ///配置参数
+    Param1:int;
+    ///配置参数
+    Param2:int;
+    ///配置参数
+    Param3:int;
+    ///配置参数
+    Param4:int;
+    ///配置参数
+    Param5:int;
+
+}
+root_type Table_GameConfig;

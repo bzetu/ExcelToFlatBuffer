@@ -1,0 +1,16 @@
+namespace GameMain;
+table Table_StraightEffectStepTime {
+    data : [DRStraightEffectStepTime];
+}
+table DRStraightEffectStepTime {
+    ///Effect表ID
+    Id:int;
+    ///备注
+    Desc:string;
+    ///特效到达时间 ms
+    VerticalRocket:int;
+    ///特效到达时间 ms
+    HorizontalRocket:int;
+
+}
+root_type Table_StraightEffectStepTime;

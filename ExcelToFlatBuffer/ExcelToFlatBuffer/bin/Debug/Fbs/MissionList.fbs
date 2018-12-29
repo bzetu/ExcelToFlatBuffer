@@ -1,0 +1,36 @@
+namespace GameMain;
+table Table_MissionList {
+    data : [DRMissionList];
+}
+table DRMissionList {
+    ///任务ID（必须从1开始编号）
+    Id:int;
+    ///任务描述（不读）
+    Desc:string;
+    ///任务名称
+    Name:string;
+    ///任务图标ID（对应资源表Resource.txt）
+    IconID:int;
+    ///任务类型（1代表剧情任务，2代表每日任务，3代表活动任务，4代表随机任务）
+    MissionType:int;
+    ///前置任务Id0
+    PredecessorsId:[int];
+    ///后续任务Id0
+    SuccessorId:[int];
+    ///任务条件(0代表不需要任何条件即可完成任务，1代表对话任务（消耗星星即可完成），2代表播放剧情的操作任务（需执行剧情操作再完成任务，是否消耗星星根据任务条件的需求数量来定），3代表先选择奖励再播放剧情的操作任务（弹出三选一界面，需选择奖励并播放剧情后完成任务，是否消耗星星根据任务条件的需求数量来定）)
+    Condition:int;
+    ///任务条件的需求数量（扣除星星数目）
+    ConditionCount:int;
+    ///任务操作次数（0代表可无限次操作，1以上代表可操作次数）
+    OperationTimes:int;
+    ///任务奖励经验
+    Experience:int;
+    ///任务触发剧情的Id（对应剧情表Story.txt）
+    StoryId:int;
+    ///任务解锁建筑的Id（对应建筑表Building.txt）
+    BuildingId:int;
+    ///用于给城建管理器发送建筑一换一信息，冒号之前是建筑的Id（对应建筑表Building.txt），冒号之后是新建筑的资源Id
+    OneReplaceOne:string;
+
+}
+root_type Table_MissionList;

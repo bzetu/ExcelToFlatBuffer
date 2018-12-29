@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_IconBase {
+    data : [DRIconBase];
+}
+table DRIconBase {
+    ///
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///图标资源ID
+    IconId:int;
+    ///1常规货币2道具3无限体力
+    Type:int;
+    ///
+    Icon:string;
+
+}
+root_type Table_IconBase;

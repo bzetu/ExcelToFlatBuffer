@@ -1,0 +1,20 @@
+namespace GameMain;
+table Table_GradeConfig {
+    data : [DRGradeConfig];
+}
+table DRGradeConfig {
+    ///levelId
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///
+    OneStarScore:int;
+    ///
+    TwoStarScore:int;
+    ///
+    ThreeStarScore:int;
+    ///
+    FourStarScore:int;
+
+}
+root_type Table_GradeConfig;

@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_MapElementWeight {
+    data : [DRMapElementWeight];
+}
+table DRMapElementWeight {
+    ///关卡ID
+    Id:int;
+    ///程序不读（0表示不携带元素、其他ID去元素表读取对应元素）
+    Desc:string;
+    ///权重1（Element元素ID+元素占权重）0表示不携带任何元素
+    ElementWeight:[string];
+    ///luck值影响的元素#每一点luck增加的权重
+    LuckImpactDropElement:string;
+    ///第X步#达Z幸运值必带Y元素
+    LuckCertainDropElement:string;
+
+}
+root_type Table_MapElementWeight;

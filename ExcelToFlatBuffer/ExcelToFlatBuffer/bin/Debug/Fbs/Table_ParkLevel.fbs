@@ -1,0 +1,24 @@
+namespace GameMain;
+table Table_ParkLevel {
+    data : [DRParkLevel];
+}
+table DRParkLevel {
+    ///游乐园等级
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///升级累计经验
+    NeedExp:int;
+    ///升级所需经验
+    AddExp:int;
+    ///宝箱1所需经验
+    BoxRequire:[int];
+    ///宝箱1奖励（对应Reward.txt表）
+    BoxReward:[int];
+    ///对所有建筑产出加成
+    Income:int;
+    ///收集金币最大上限
+    Max:int;
+
+}
+root_type Table_ParkLevel;

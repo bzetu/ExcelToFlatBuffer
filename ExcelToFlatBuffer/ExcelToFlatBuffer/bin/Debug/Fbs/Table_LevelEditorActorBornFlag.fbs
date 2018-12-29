@@ -1,0 +1,18 @@
+namespace GameMain;
+table Table_LevelEditorActorBornFlag {
+    data : [DRLevelEditorActorBornFlag];
+}
+table DRLevelEditorActorBornFlag {
+    ///表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///资源Id
+    ResourceId:int;
+    ///资源Id
+    IconId:int;
+    ///依赖的关卡类型
+    DependLevelType:int;
+
+}
+root_type Table_LevelEditorActorBornFlag;

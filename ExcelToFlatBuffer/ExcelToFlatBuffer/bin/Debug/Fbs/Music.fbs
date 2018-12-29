@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_Music {
+    data : [DRMusic];
+}
+table DRMusic {
+    ///Music表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///界面的路径信息
+    AssetName:string;
+
+}
+root_type Table_Music;

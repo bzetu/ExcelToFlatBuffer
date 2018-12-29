@@ -1,0 +1,32 @@
+namespace GameMain;
+table Table_TreasureMapData {
+    data : [DRTreasureMapData];
+}
+table DRTreasureMapData {
+    ///藏宝图资源表表ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///藏宝图块的图标
+    MapIconName:string;
+    ///藏宝图块的索引
+    MapIndex:int;
+    ///
+    PosX:int;
+    ///
+    PosY:int;
+    ///
+    PosZ:int;
+    ///
+    RotationX:int;
+    ///
+    RotationY:int;
+    ///
+    RotationZ:int;
+    ///
+    RotationW:int;
+    ///
+    StoryId:[int];
+
+}
+root_type Table_TreasureMapData;

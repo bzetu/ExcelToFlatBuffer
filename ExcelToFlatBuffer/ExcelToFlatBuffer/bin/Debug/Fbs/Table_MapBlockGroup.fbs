@@ -1,0 +1,14 @@
+namespace GameMain;
+table Table_MapBlockGroup {
+    data : [DRMapBlockGroup];
+}
+table DRMapBlockGroup {
+    ///下落组ID
+    Id:int;
+    ///程序不读
+    Desc:string;
+    ///组成员(多个成员用|分隔)
+    BlcokElements:string;
+
+}
+root_type Table_MapBlockGroup;

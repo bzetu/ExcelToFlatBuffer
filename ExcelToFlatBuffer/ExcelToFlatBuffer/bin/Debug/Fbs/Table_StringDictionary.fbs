@@ -1,0 +1,16 @@
+namespace GameMain;
+table Table_StringDictionary {
+    data : [DRStringDictionary];
+}
+table DRStringDictionary {
+    ///序号
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///索引
+    StringIndex:string;
+    ///内容
+    StringContent:string;
+
+}
+root_type Table_StringDictionary;

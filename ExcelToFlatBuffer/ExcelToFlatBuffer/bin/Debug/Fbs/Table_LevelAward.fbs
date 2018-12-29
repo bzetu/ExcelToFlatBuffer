@@ -1,0 +1,26 @@
+namespace GameMain;
+table Table_LevelAward {
+    data : [DRLevelAward];
+}
+table DRLevelAward {
+    ///关卡ID
+    Id:int;
+    ///描述(不读)
+    Desc:string;
+    ///commonItemId
+    ItemId:[int];
+    ///数量
+    Count:[int];
+    ///掉落的藏宝图资源id
+    TreasureMapDataId:int;
+    ///金币
+    CoinCount:int;
+    ///钻石
+    DiamondCount:int;
+    ///体力
+    StaminaCount:int;
+    ///体力持续时间（分钟）
+    InfiniteStaminaTime:int;
+
+}
+root_type Table_LevelAward;
