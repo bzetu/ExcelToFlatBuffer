@@ -10,6 +10,6 @@ namespace ExcelToFlatBuffer
     {
         public abstract void Execute(ExcelData excelData,System.Action<ExcelData,bool> onFinished);
 
-        public abstract bool DealRow(List<string> rowData);
+        public abstract bool DealRow(ExcelData excelData,int rowIndex);
     }
 }

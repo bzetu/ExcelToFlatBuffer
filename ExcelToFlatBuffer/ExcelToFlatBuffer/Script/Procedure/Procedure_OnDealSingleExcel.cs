@@ -28,8 +28,7 @@ namespace ExcelToFlatBuffer
             int rowCount = allRows.Count;
             for (int i = 0; i < rowCount; i++)
             {
-                List<string> cellList = allRows[i];
-                generateRes.DealRow(cellList);
+                generateRes.DealRow(excelData, i);
             }
 
             generateCode.Execute(excelData, (ExcelData d1, bool r1) =>

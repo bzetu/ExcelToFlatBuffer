@@ -43,8 +43,19 @@ namespace ExcelToFlatBuffer
         public void Execute()
         {
             Debug.Log("正在清理缓存...");
-            Tools.DeleteFilesWithoutFolder(Setting.GenerateByteFilePath);
-            Tools.DeleteFilesWithoutFolder(Setting.GenerateFlatCodePath);
+            if (ProSetting.Instance.GetCurUseType() == UseType.Server)
+            {
+                Tools.DeleteFilesWithoutFolder(Setting.GenServerJavaJsonFilePath);
+                Tools.DeleteFilesWithoutFolder(Setting.GenJavaServerJsonCodePath);
+            }
+            else
+            {
+                Tools.DeleteFilesWithoutFolder(Setting.GenerateByteFilePath);
+                Tools.DeleteFilesWithoutFolder(Setting.GenerateFlatCodePath);
+            }
+            
+
+            
 
             AddDelayRun(() =>
             {
@@ -72,35 +83,6 @@ namespace ExcelToFlatBuffer
             {
                 m_actionQueue.Enqueue(action);
             }
-        }
-
-
-        public void GenerateFile(byte[] buffer,string path)
-        {
-            try
-            {
-                System.IO.File.WriteAllBytes(path, buffer);
-            }
-            catch (Exception error)
-            {
-                Debug.LogError(error);
-            }
-            
-        }
-
-        public bool GenerateFile(string content, string path)
-        {
-            try
-            {
-                System.IO.File.WriteAllText(path, content);
-                return true;
-            }
-            catch (Exception error)
-            {
-                Debug.LogError(error);
-                return false;
-            }
-            
         }
 
         public void SetGenerateCodeFinish(string codeName)
@@ -200,6 +182,18 @@ namespace ExcelToFlatBuffer
             else
                 return "";
         }
+
+        public int GetAllRowCount()
+        {
+            return m_DataCache.Count;
+        }
+
+
+        public int GetAllColumCount()
+        {
+            return m_DataCache[0].Count;
+        }
+
     }
 
 }

@@ -43,7 +43,12 @@ namespace ExcelToFlatBuffer
                         string fileName = Path.GetFileName(excelPath);
                         string extension = Path.GetExtension(excelPath);
                         string tableName = fileName.Replace(extension, "");
-                        m_loading.Add(fileName, false);
+                        if (!m_loading.ContainsKey(fileName))
+                            m_loading.Add(fileName, false);
+                        else
+                        {
+                            Debug.LogError("发现相同的配表名称:" + fileName);
+                        }
                         AddDelayRun(() =>
                         {
                             Read_Single_Excel(excelPath);

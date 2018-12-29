@@ -93,7 +93,7 @@
     <Compile Include="Script\Procedure\Procedure_GenerateFlatBufferCode.cs" />
     <Compile Include="Script\Procedure\Procedure_ReadExcel.cs" />
     <Compile Include="Script\Procedure\Procedure_OnAllExcelDealFinish.cs" />
-    <Compile Include="Script\Procedure\Produce_OnExit.cs" />
+    <Compile Include="Script\Procedure\Procedrure_OnExit.cs" />
     <Compile Include="Script\Program.cs" />
     <Compile Include="Script\Save\ICache.cs" />
     <Compile Include="Script\Save\ProSetting.cs" />

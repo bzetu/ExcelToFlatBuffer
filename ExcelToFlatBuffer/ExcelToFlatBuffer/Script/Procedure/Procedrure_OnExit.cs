@@ -18,8 +18,17 @@ namespace ExcelToFlatBuffer
             Tools.DeleteFilesWithoutFolder(outCodePath);
             Tools.DeleteFilesWithoutFolder(outBytesPath);
 
-            Tools.CopyDirectory(Setting.GenerateFlatCodePath, outCodePath);
-            Tools.CopyDirectory(Setting.GenerateByteFilePath, outBytesPath);
+            if (ProSetting.Instance.GetCurUseType() == UseType.Server)
+            {
+                Tools.CopyDirectory(Setting.GenJavaServerJsonCodePath, outCodePath);
+                Tools.CopyDirectory(Setting.GenServerJavaJsonFilePath, outBytesPath);
+            }
+            else
+            {
+                Tools.CopyDirectory(Setting.GenerateFlatCodePath, outCodePath);
+                Tools.CopyDirectory(Setting.GenerateByteFilePath, outBytesPath);
+            }
+            
 
             if (result == DialogResult.OK)
             {

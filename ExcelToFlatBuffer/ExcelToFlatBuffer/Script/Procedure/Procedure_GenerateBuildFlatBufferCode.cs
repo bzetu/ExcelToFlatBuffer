@@ -103,7 +103,7 @@ namespace ExcelToFlatBuffer
             //Console.WriteLine(script);
 
             string codePath = System.IO.Path.Combine(Setting.GenerateBuildFlatCodePath, "GenerateByte_" + excelData.Name + ".cs");
-            if (GenerateFile(script, codePath))
+            if (Tools.GenerateFile(script, codePath))
             {
                 Debug.Log("创建生成二进制代码" + codePath + "成功!");
             }
@@ -132,7 +132,7 @@ namespace ExcelToFlatBuffer
 
             string scriptCode = string.Format(Template.Template_GenerateManager, GenerateManagerCode);
             string path = System.IO.Path.Combine(Setting.GenerateBuildFlatCodePath, "GenerateManager.cs");
-            GenerateFile(scriptCode, System.IO.Path.Combine(Setting.GenerateBuildFlatCodePath, "GenerateManager.cs"));
+            Tools.GenerateFile(scriptCode, System.IO.Path.Combine(Setting.GenerateBuildFlatCodePath, "GenerateManager.cs"));
             Debug.Log("[Generate]=>" + path + " Sucess!");
 
             AddDelayRun(() =>
@@ -202,7 +202,7 @@ namespace ExcelToFlatBuffer
         {
             string flatBufferManagerCode = string.Format(Template.Template_FlatBufferTableManager, FlatBufferTableManagerCode_Content1, FlatBufferTableManagerCode_Content2);
             string path = System.IO.Path.Combine(Setting.GenerateFlatCodePath, "FlatBufferTableManager.cs");
-            GenerateFile(flatBufferManagerCode, path);
+            Tools.GenerateFile(flatBufferManagerCode, path);
             Debug.Log("[Generate]=>" + path + " Sucess!");
         }
     }

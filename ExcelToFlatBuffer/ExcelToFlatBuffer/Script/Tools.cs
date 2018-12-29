@@ -102,5 +102,33 @@ namespace ExcelToFlatBuffer
             }
         }
 
+        public static void GenerateFile(byte[] buffer, string path)
+        {
+            try
+            {
+                System.IO.File.WriteAllBytes(path, buffer);
+            }
+            catch (Exception error)
+            {
+                Debug.LogError(error);
+            }
+
+        }
+
+        public static bool GenerateFile(string content, string path)
+        {
+            try
+            {
+                System.IO.File.WriteAllText(path, content);
+                return true;
+            }
+            catch (Exception error)
+            {
+                Debug.LogError(error);
+                return false;
+            }
+
+        }
+
     }
 }

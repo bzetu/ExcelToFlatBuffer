@@ -66,12 +66,29 @@ namespace ExcelToFlatBuffer
             } 
         }
 
-        //public static string ProgramBytesDirPath = @"E:\FantasyPark\src\trunk\Client\Assets\GameMain\DataTables";
 
-        //public static string ProgramFlatCodeDirPath = @"E:\FantasyPark\src\trunk\Client\Assets\GameMain\Scripts\DataTable";
+        /// <summary>
+        /// 生成路径->Java服务器需要的Json解析代码(Java的)
+        /// </summary>
+        public static string GenJavaServerJsonCodePath
+        {
+            get
+            {
+                return Path.Combine(ExeRootPath, "JavaJson/JsonCode");
+            }
+        }
 
+        /// <summary>
+        /// 生成路径->Java服务器需要的Json文件(资源)
+        /// </summary>
+        public static string GenServerJavaJsonFilePath
+        {
+            get
+            {
+                return Path.Combine(ExeRootPath, "JavaJson/JsonFile");
+            }
+        }
 
-        
 
 
     }

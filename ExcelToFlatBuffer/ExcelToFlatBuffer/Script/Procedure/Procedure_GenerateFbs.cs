@@ -76,7 +76,7 @@ namespace ExcelToFlatBuffer
 
             string fbs = string.Format(Template.Template_Fbs, excelData.Name, excelData.Name, excelData.Name, generateScript, excelData.Name);
 
-            if (GenerateFile(fbs, excelData.FbsPath))
+            if (Tools.GenerateFile(fbs, excelData.FbsPath))
             {
                 Debug.Log("[Generate]=> " + excelData.FbsPath + " Sucess!");
 

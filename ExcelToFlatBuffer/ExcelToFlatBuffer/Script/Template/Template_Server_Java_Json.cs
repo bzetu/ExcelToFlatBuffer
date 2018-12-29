@@ -95,9 +95,8 @@ public class TableLevelTarget {{
 ";
 
         public static string Template_SingleTableCodeWordGet =
-@"    public int get{0}(){{
-        return this.m{1};
-    }}
+@"     //{0}     
+     public int get{1}(){{return this.m{2};}}
 ";
 
         public static string Template_Json = 
@@ -106,7 +105,7 @@ public class TableLevelTarget {{
 ]
 ";
         public static string Template_JsonCell =
-@"""{0}"": {1},";
+@"""{0}"": {1}";
 
 
 
