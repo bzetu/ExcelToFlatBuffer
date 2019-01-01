@@ -6,12 +6,32 @@ using System.Threading.Tasks;
 
 namespace ExcelToFlatBuffer
 {
+    public enum UseType
+    {
+        Client,
+        Server,
+    }
+
+    public enum LanguageType
+    {
+        CSharp,
+        Java,
+        Lua,
+    }
+
+    public enum AnalysisType
+    {
+        FlatBuffer,
+        Json,
+    }
+
     [Serializable]
-    public class ProSetting : CacheBase<ProSetting>, ICache
+    public class UserSetting : CacheBase<UserSetting>, ICache
     {
         private List<Setting_CustomBarCellData> m_CustomBarCellList = new List<Setting_CustomBarCellData>();
         public int curSelectTabIndex = 0;
 
+        [NonSerialized]
         private bool m_isDrty;
         public bool IsDrty {
             private set {
@@ -20,6 +40,36 @@ namespace ExcelToFlatBuffer
             get { return m_isDrty;  }
         }
 
+
+        public void SetUseType(int tabIndex, UseType type)
+        {
+            if (tabIndex < m_CustomBarCellList.Count)
+            {
+                Setting_CustomBarCellData cell = m_CustomBarCellList[tabIndex];
+                cell.UseType = (int)type;
+                IsDrty = true;
+            }
+        }
+
+        public void SetLanguageType(int tabIndex, LanguageType type)
+        {
+            if (tabIndex < m_CustomBarCellList.Count)
+            {
+                Setting_CustomBarCellData cell = m_CustomBarCellList[tabIndex];
+                cell.LanguageType = (int)type;
+                IsDrty = true;
+            }
+        }
+
+        public void SetAnalysisType(int tabIndex, AnalysisType type)
+        {
+            if (tabIndex < m_CustomBarCellList.Count)
+            {
+                Setting_CustomBarCellData cell = m_CustomBarCellList[tabIndex];
+                cell.AnalysisType = (int)type;
+                IsDrty = true;
+            }
+        }
 
         #region 框架接口
         public void OnInit()
@@ -36,6 +86,9 @@ namespace ExcelToFlatBuffer
         {
 
         }
+
+
+
 
         public void AddCustomBarCell(Setting_CustomBarCellData cell)
         {
@@ -130,14 +183,54 @@ namespace ExcelToFlatBuffer
 
         public UseType GetCurUseType()
         {
-            return UseType.Server;
+            var setting = GetTabUserSetting(this.curSelectTabIndex);
+            if (setting != null)
+            {
+                return (UseType)setting.UseType;
+            }
+            return UseType.Client;
         }
+
+        public LanguageType GetCurLanguageType()
+        {
+            var setting = GetTabUserSetting(this.curSelectTabIndex);
+            if (setting != null)
+            {
+                return (LanguageType)setting.LanguageType;
+            }
+            return LanguageType.CSharp;
+        }
+
+        public AnalysisType GetCurAnalysisType()
+        {
+            var setting = GetTabUserSetting(this.curSelectTabIndex);
+            if (setting != null)
+            {
+                return (AnalysisType)setting.AnalysisType;
+            }
+            return AnalysisType.FlatBuffer;
+        }
+
+        private Setting_CustomBarCellData GetTabUserSetting(int tabIndex)
+        {
+            if (this.curSelectTabIndex < m_CustomBarCellList.Count)
+            {
+                var data = m_CustomBarCellList[tabIndex];
+                return data;
+            }
+            return null;
+        }
+
 
         public override bool Save()
         {
             IsDrty = false;
             return base.Save();
         }
+
+
+
+
     }
     [Serializable]
     public class Setting_CustomBarCellData
@@ -155,6 +248,19 @@ namespace ExcelToFlatBuffer
         public string Path_Excel;
         public string Path_OutCode;
         public string Path_OutByte;
+
+        /// <summary>
+        /// 使用类型
+        /// </summary>
+        public int UseType;
+        /// <summary>
+        /// 代码语言
+        /// </summary>
+        public int LanguageType;
+        /// <summary>
+        /// 解析器类型
+        /// </summary>
+        public int AnalysisType;
     }
 
 

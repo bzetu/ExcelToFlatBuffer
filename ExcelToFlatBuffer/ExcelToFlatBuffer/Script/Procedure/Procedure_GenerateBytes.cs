@@ -15,8 +15,8 @@ namespace ExcelToFlatBuffer
             Debug.Log("生成flatbuffer序列化文件完毕!");
             var result = MessageBox.Show("生成成功!", "提示", MessageBoxButtons.OK);
 
-            string outCodePath = ProSetting.Instance.GetCurOutFlatBufferCodePath();
-            string outBytesPath = ProSetting.Instance.GetCurOutByteFilePath();
+            string outCodePath = UserSetting.Instance.GetCurOutFlatBufferCodePath();
+            string outBytesPath = UserSetting.Instance.GetCurOutByteFilePath();
             
             Tools.DeleteFilesWithoutFolder(outCodePath);
             Tools.DeleteFilesWithoutFolder(outBytesPath);

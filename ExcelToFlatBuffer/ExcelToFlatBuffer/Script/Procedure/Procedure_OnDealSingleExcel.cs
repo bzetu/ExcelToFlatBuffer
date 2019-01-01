@@ -45,7 +45,12 @@ namespace ExcelToFlatBuffer
                                 DealExcelIndex++;
                                 if (PreDealExcelIndex == DealExcelIndex) //如果所有的Excel都处理完了,切到下一个流程(整体处理)
                                 {
-                                    Procedure_OnAllExcelDealFinish(m_ExcelDataList);
+                                    Console.WriteLine("PreDealExcelIndex:" + PreDealExcelIndex.ToString());
+                                    AddDelayRun(() =>
+                                    {
+                                        Procedure_OnAllExcelDealFinish(m_ExcelDataList);
+                                    });
+                                        
                                 }
                             }
                         });

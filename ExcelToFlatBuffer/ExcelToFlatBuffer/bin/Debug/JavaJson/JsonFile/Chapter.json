@@ -1,8 +1,8 @@
 [
-{"#int": 1,"string": "仙踪林","string": "仙踪林","int": 125},
-{"#int": 2,"string": "晶莹谷","string": "晶莹谷","int": 15},
-{"#int": 3,"string": "琥珀城堡","string": "琥珀城堡","int": 15},
-{"#int": 4,"string": "阿格拉巴","string": "阿格拉巴","int": 15},
-{"#int": 5,"string": "珍珠海域","string": "珍珠海域","int": 15},
-{"#int": 6,"string": "快乐镇","string": "快乐镇","int": 15}
+{"Id": 1,"Desc": "第1章","Name": "第1章","Levelsum": 20,"Dragrangxmax": 45,"Dragrangxmin": 20,"Dragrangzmax": 25,"Dragrangzmin": -30,"Pinchviewrangmax": 65,"Pinchviewrangmin": 35,"Dragspeed": 10,"Pichspeed": 0.02},
+{"Id": 2,"Desc": "第2章","Name": "第2章","Levelsum": 30,"Dragrangxmax": 45,"Dragrangxmin": 20,"Dragrangzmax": 25,"Dragrangzmin": -40,"Pinchviewrangmax": 65,"Pinchviewrangmin": 35,"Dragspeed": 10,"Pichspeed": 0.02},
+{"Id": 3,"Desc": "第3章","Name": "第3章","Levelsum": 40,"Dragrangxmax": 45,"Dragrangxmin": 20,"Dragrangzmax": 25,"Dragrangzmin": -55,"Pinchviewrangmax": 65,"Pinchviewrangmin": 35,"Dragspeed": 10,"Pichspeed": 0.02},
+{"Id": 4,"Desc": "第4章","Name": "第4章","Levelsum": 40,"Dragrangxmax": 45,"Dragrangxmin": 20,"Dragrangzmax": 25,"Dragrangzmin": -55,"Pinchviewrangmax": 65,"Pinchviewrangmin": 35,"Dragspeed": 10,"Pichspeed": 0.02},
+{"Id": 5,"Desc": "第5章","Name": "第5章","Levelsum": 40,"Dragrangxmax": 45,"Dragrangxmin": 20,"Dragrangzmax": 25,"Dragrangzmin": -55,"Pinchviewrangmax": 65,"Pinchviewrangmin": 35,"Dragspeed": 10,"Pichspeed": 0.02},
+{"Id": 6,"Desc": "第6章","Name": "第6章","Levelsum": 40,"Dragrangxmax": 45,"Dragrangxmin": 20,"Dragrangzmax": 25,"Dragrangzmin": -55,"Pinchviewrangmax": 65,"Pinchviewrangmin": 35,"Dragspeed": 10,"Pichspeed": 0.02}
 ]

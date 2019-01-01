@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using NPOI;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
@@ -43,19 +43,25 @@ namespace ExcelToFlatBuffer
         public void Execute()
         {
             Debug.Log("正在清理缓存...");
-            if (ProSetting.Instance.GetCurUseType() == UseType.Server)
-            {
-                Tools.DeleteFilesWithoutFolder(Setting.GenServerJavaJsonFilePath);
-                Tools.DeleteFilesWithoutFolder(Setting.GenJavaServerJsonCodePath);
-            }
-            else
+            SchemeType scheme = Setting.GetCurSchemeType();
+
+            if (scheme == SchemeType.Client_CSharp_To_FlatBuffer)
             {
                 Tools.DeleteFilesWithoutFolder(Setting.GenerateByteFilePath);
                 Tools.DeleteFilesWithoutFolder(Setting.GenerateFlatCodePath);
             }
-            
+            else if (scheme == SchemeType.Server_Java_To_Json)
+            {
+                Tools.DeleteFilesWithoutFolder(Setting.GenServerJavaJsonFilePath);
+                Tools.DeleteFilesWithoutFolder(Setting.GenJavaServerJsonCodePath);
+            }
+            else if(scheme == SchemeType.UnKown)
+            {
+                MessageBox.Show("Excel路径不能为空!");
+                return;
+            }
 
-            
+
 
             AddDelayRun(() =>
             {
@@ -147,13 +153,28 @@ namespace ExcelToFlatBuffer
             m_DataCache.Add(rowData);
             if (rowIndex == 0)
             {
-                string keyType = rowData[0].Replace("#", "").ToLower();
+                rowData[0] = rowData[0].Replace("#", "");  //第一列做为Key不能注释
+                for (int i = 0; i < rowData.Count; i++)
+                {
+                    string temp = rowData[i].ToLower();
+                    rowData[i] = temp[0].ToString().ToUpper() + temp.Substring(1);
+                }
+
+                string keyType = rowData[0];
                 if (keyType == "int")
                     KeyType = 0;
-                else if(keyType == "string")
+                else if (keyType == "string")
                     KeyType = 1;
             }
-            if (rowIndex > 2)
+            else if (rowIndex == 1)
+            {
+                rowData[0] = rowData[0].Replace("#", ""); //第一列做为Key不能注释
+                for (int i = 0; i < rowData.Count; i++)
+                {
+                    rowData[i] = rowData[i].ToLower();
+                }
+            }
+            else if (rowIndex > 2)
             {
                 KeyValueString += string.Format(@"{{{0},{1}}},", rowData[0], rowIndex - 3);
             }
@@ -175,6 +196,11 @@ namespace ExcelToFlatBuffer
             return m_DataCache;
         }
 
+        /// <summary>
+        /// 获取字段类型
+        /// </summary>
+        /// <param name="columnIndex"></param>
+        /// <returns></returns>
         public string GetTypeName(int columnIndex)
         {
             if (m_DataCache.Count > 1)
@@ -182,6 +208,20 @@ namespace ExcelToFlatBuffer
             else
                 return "";
         }
+
+        /// <summary>
+        /// 获取字段名称
+        /// </summary>
+        /// <param name="columnIndex"></param>
+        /// <returns></returns>
+        public string GetWordName(int columnIndex)
+        {
+            if (m_DataCache.Count > 0)
+                return m_DataCache[0][columnIndex];
+            else
+                return "";
+        }
+
 
         public int GetAllRowCount()
         {

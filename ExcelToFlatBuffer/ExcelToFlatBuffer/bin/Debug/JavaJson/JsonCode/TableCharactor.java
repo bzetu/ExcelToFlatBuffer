@@ -4,34 +4,36 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableCharactor {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
+     private String mDesc;
      @JsonProperty("Model")
      private int mModel;
-     @JsonProperty("PositionX")
-     private int mPositionX;
-     @JsonProperty("PositionY")
-     private int mPositionY;
-     @JsonProperty("PositionZ")
-     private int mPositionZ;
+     @JsonProperty("Positionx")
+     private float mPositionx;
+     @JsonProperty("Positiony")
+     private float mPositiony;
+     @JsonProperty("Positionz")
+     private float mPositionz;
 
 
      //#ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //状态的模型Id     
      public int getModel(){return this.mModel;}
      //角色初始位置（X、Y、Z）     
-     public int getPositionX(){return this.mPositionX;}
-     //     
-     public int getPositionY(){return this.mPositionY;}
-     //     
-     public int getPositionZ(){return this.mPositionZ;}
+     public float getPositionx(){return this.mPositionx;}
+     //该字段未添加注释     
+     public float getPositiony(){return this.mPositiony;}
+     //该字段未添加注释     
+     public float getPositionz(){return this.mPositionz;}
 
 
 }

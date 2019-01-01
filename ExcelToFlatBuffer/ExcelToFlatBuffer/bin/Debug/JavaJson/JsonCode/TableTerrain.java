@@ -4,22 +4,24 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableTerrain {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("ResourceId")
-     private int mResourceId;
+     private String mDesc;
+     @JsonProperty("Resourceid")
+     private int mResourceid;
 
 
      //#Block表ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //程序不读     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //资源ID     
-     public int getResourceId(){return this.mResourceId;}
+     public int getResourceid(){return this.mResourceid;}
 
 
 }

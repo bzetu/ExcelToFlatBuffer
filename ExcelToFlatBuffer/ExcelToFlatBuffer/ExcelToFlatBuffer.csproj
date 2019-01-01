@@ -96,7 +96,7 @@
     <Compile Include="Script\Procedure\Procedrure_OnExit.cs" />
     <Compile Include="Script\Program.cs" />
     <Compile Include="Script\Save\ICache.cs" />
-    <Compile Include="Script\Save\ProSetting.cs" />
+    <Compile Include="Script\Save\UserSetting.cs" />
     <Compile Include="Script\Setting.cs" />
     <Compile Include="Script\Template\Template.cs" />
     <Compile Include="Script\Template\Template_Server_Java_Json.cs" />

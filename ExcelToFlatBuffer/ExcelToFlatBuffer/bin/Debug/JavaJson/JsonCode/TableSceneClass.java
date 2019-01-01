@@ -4,86 +4,92 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableSceneClass {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("ResName")
-     private int mResName;
-     @JsonProperty("AtkType")
-     private int mAtkType;
+     private String mDesc;
+     @JsonProperty("Resname")
+     private String mResname;
+     @JsonProperty("Atktype")
+     private int mAtktype;
      @JsonProperty("Type")
      private int mType;
-     @JsonProperty("ScriptID")
-     private int mScriptID;
+     @JsonProperty("Loadingtype")
+     private int mLoadingtype;
+     @JsonProperty("Scriptid")
+     private int mScriptid;
      @JsonProperty("Obstacle")
-     private int mObstacle;
-     @JsonProperty("MaxPlayer")
-     private int mMaxPlayer;
-     @JsonProperty("SceneMapLogicWidth")
-     private int mSceneMapLogicWidth;
-     @JsonProperty("BGMusic")
-     private int mBGMusic;
-     @JsonProperty("MiniMapName")
-     private int mMiniMapName;
-     @JsonProperty("BigMiniMapName")
-     private int mBigMiniMapName;
-     @JsonProperty("CameraSettingID")
-     private int mCameraSettingID;
-     @JsonProperty("ShadowsSettingID")
-     private int mShadowsSettingID;
-     @JsonProperty("MinX")
-     private int mMinX;
-     @JsonProperty("MaxX")
-     private int mMaxX;
-     @JsonProperty("MinZ")
-     private int mMinZ;
-     @JsonProperty("MaxZ")
-     private int mMaxZ;
-     @JsonProperty("AssetGroup")
-     private int mAssetGroup;
+     private String mObstacle;
+     @JsonProperty("Maxplayer")
+     private int mMaxplayer;
+     @JsonProperty("Scenemaplogicwidth")
+     private int mScenemaplogicwidth;
+     @JsonProperty("Bgmusic")
+     private int mBgmusic;
+     @JsonProperty("Minimapname")
+     private String mMinimapname;
+     @JsonProperty("Bigminimapname")
+     private String mBigminimapname;
+     @JsonProperty("Camerasettingid")
+     private int mCamerasettingid;
+     @JsonProperty("Shadowssettingid")
+     private int mShadowssettingid;
+     @JsonProperty("Minx")
+     private float mMinx;
+     @JsonProperty("Maxx")
+     private float mMaxx;
+     @JsonProperty("Minz")
+     private float mMinz;
+     @JsonProperty("Maxz")
+     private float mMaxz;
+     @JsonProperty("Assetgroup")
+     private String mAssetgroup;
 
 
      //#场景ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //资源名称     
-     public int getResName(){return this.mResName;}
+     public String getResname(){return this.mResname;}
      //类型(-1登陆等无关场景，0主城，1战斗场景)     
-     public int getAtkType(){return this.mAtkType;}
+     public int getAtktype(){return this.mAtktype;}
      //类型(-1客户端场景，0主城，1副本场景)     
      public int getType(){return this.mType;}
+     //Loading界面类型(0:无需loading直接切换 1:使用普通loading; 2:城建Loading; 3.视情况而定)     
+     public int getLoadingtype(){return this.mLoadingtype;}
      //服务器用脚本ID（客户端场景填-1，无脚本的填-1）     
-     public int getScriptID(){return this.mScriptID;}
+     public int getScriptid(){return this.mScriptid;}
      //阻挡文件(服务器使用)     
-     public int getObstacle(){return this.mObstacle;}
+     public String getObstacle(){return this.mObstacle;}
      //场景内玩家数量上限     
-     public int getMaxPlayer(){return this.mMaxPlayer;}
+     public int getMaxplayer(){return this.mMaxplayer;}
      //场景地图宽度     
-     public int getSceneMapLogicWidth(){return this.mSceneMapLogicWidth;}
+     public int getScenemaplogicwidth(){return this.mScenemaplogicwidth;}
      //背景音乐ID     
-     public int getBGMusic(){return this.mBGMusic;}
+     public int getBgmusic(){return this.mBgmusic;}
      //小地图的名称     
-     public int getMiniMapName(){return this.mMiniMapName;}
+     public String getMinimapname(){return this.mMinimapname;}
      //展开小地图的名称     
-     public int getBigMiniMapName(){return this.mBigMiniMapName;}
+     public String getBigminimapname(){return this.mBigminimapname;}
      //主摄像机设置ID     
-     public int getCameraSettingID(){return this.mCameraSettingID;}
+     public int getCamerasettingid(){return this.mCamerasettingid;}
      //投影参数设置     
-     public int getShadowsSettingID(){return this.mShadowsSettingID;}
+     public int getShadowssettingid(){return this.mShadowssettingid;}
      //摄像机移动最小X     
-     public int getMinX(){return this.mMinX;}
+     public float getMinx(){return this.mMinx;}
      //摄像机移动最大X     
-     public int getMaxX(){return this.mMaxX;}
+     public float getMaxx(){return this.mMaxx;}
      //摄像机移动最小Z     
-     public int getMinZ(){return this.mMinZ;}
+     public float getMinz(){return this.mMinz;}
      //摄像机移动最大Z     
-     public int getMaxZ(){return this.mMaxZ;}
+     public float getMaxz(){return this.mMaxz;}
      //资源ID组（String）     
-     public int getAssetGroup(){return this.mAssetGroup;}
+     public String getAssetgroup(){return this.mAssetgroup;}
 
 
 }

@@ -4,114 +4,100 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableGameLevels {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("OpenCondition:0")
-     private int mOpenCondition:0;
-     @JsonProperty("OpenCondition:1")
-     private int mOpenCondition:1;
-     @JsonProperty("OpenCondition:2")
-     private int mOpenCondition:2;
+     private String mDesc;
+     @JsonProperty("Opencondition")
+     private List<Integer> mOpencondition;
      @JsonProperty("Step")
      private int mStep;
-     @JsonProperty("Condition:0")
-     private int mCondition:0;
-     @JsonProperty("Condition:1")
-     private int mCondition:1;
-     @JsonProperty("Condition:2")
-     private int mCondition:2;
-     @JsonProperty("BonusId")
-     private int mBonusId;
-     @JsonProperty("AddEntityID")
-     private int mAddEntityID;
-     @JsonProperty("LevelType")
-     private int mLevelType;
-     @JsonProperty("MapType")
-     private int mMapType;
-     @JsonProperty("GameMode")
-     private int mGameMode;
-     @JsonProperty("DefaultOpenSpeed")
-     private int mDefaultOpenSpeed;
-     @JsonProperty("FallingSpeed")
-     private int mFallingSpeed;
-     @JsonProperty("GuideGroupId")
-     private int mGuideGroupId;
-     @JsonProperty("GuideNewPlayStepID")
-     private int mGuideNewPlayStepID;
-     @JsonProperty("GuideHelpId")
-     private int mGuideHelpId;
+     @JsonProperty("Condition")
+     private List<Integer> mCondition;
+     @JsonProperty("Bonusid")
+     private int mBonusid;
+     @JsonProperty("Addentityid")
+     private int mAddentityid;
+     @JsonProperty("Leveltype")
+     private int mLeveltype;
+     @JsonProperty("Maptype")
+     private int mMaptype;
+     @JsonProperty("Gamemode")
+     private int mGamemode;
+     @JsonProperty("Defaultopenspeed")
+     private boolean mDefaultopenspeed;
+     @JsonProperty("Fallingspeed")
+     private int mFallingspeed;
+     @JsonProperty("Guidegroupid")
+     private int mGuidegroupid;
+     @JsonProperty("Guidenewplaystepid")
+     private int mGuidenewplaystepid;
+     @JsonProperty("Guidehelpid")
+     private int mGuidehelpid;
      @JsonProperty("Background")
-     private int mBackground;
-     @JsonProperty("LevelTargetMsg")
-     private int mLevelTargetMsg;
-     @JsonProperty("OpenFunctionID")
-     private int mOpenFunctionID;
-     @JsonProperty("OpenItem")
-     private int mOpenItem;
-     @JsonProperty("MoFangProduceItemId")
-     private int mMoFangProduceItemId;
-     @JsonProperty("BuyStepFreeofcharge")
-     private int mBuyStepFreeofcharge;
-     @JsonProperty("BackImgId")
-     private int mBackImgId;
+     private String mBackground;
+     @JsonProperty("Leveltargetmsg")
+     private String mLeveltargetmsg;
+     @JsonProperty("Openfunctionid")
+     private int mOpenfunctionid;
+     @JsonProperty("Openitem")
+     private String mOpenitem;
+     @JsonProperty("Mofangproduceitemid")
+     private int mMofangproduceitemid;
+     @JsonProperty("Buystepfreeofcharge")
+     private boolean mBuystepfreeofcharge;
+     @JsonProperty("Backimgid")
+     private int mBackimgid;
 
 
      //#场景ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //关卡开启条件1     
-     public int getOpenCondition:0(){return this.mOpenCondition:0;}
-     //关卡开启条件2     
-     public int getOpenCondition:1(){return this.mOpenCondition:1;}
-     //关卡开启条件3     
-     public int getOpenCondition:2(){return this.mOpenCondition:2;}
+     public List<Integer> getOpencondition(){return this.mOpencondition;}
      //通关步数     
      public int getStep(){return this.mStep;}
      //通关条件1（LevelTarget表的通关目标）     
-     public int getCondition:0(){return this.mCondition:0;}
-     //通关条件2（LevelTarget表的通关目标）     
-     public int getCondition:1(){return this.mCondition:1;}
-     //通关条件3     
-     public int getCondition:2(){return this.mCondition:2;}
+     public List<Integer> getCondition(){return this.mCondition;}
      //奖励id     
-     public int getBonusId(){return this.mBonusId;}
+     public int getBonusid(){return this.mBonusid;}
      //附加类型（实体ID）     
-     public int getAddEntityID(){return this.mAddEntityID;}
+     public int getAddentityid(){return this.mAddentityid;}
      //关卡类型(具体的类型要跟程序的一致：-1无效，1幽灵)     
-     public int getLevelType(){return this.mLevelType;}
-     //地图类型(1.经典地图(不支持浮空下落);2.固定地图;3.竖屏滑动地图;4.横屏滑动地图;5.母鸡捉小鹰地图 6.幽灵，10地鼠)     
-     public int getMapType(){return this.mMapType;}
+     public int getLeveltype(){return this.mLeveltype;}
+     //地图类型(1.经典地图(不支持浮空下落);2.固定地图;3.竖屏滑动地图;4.横屏滑动地图;5.母鸡捉小鹰地图 6.幽灵，8.啄木鸟，10地鼠)     
+     public int getMaptype(){return this.mMaptype;}
      //游戏类型（当maptype列为6幽灵时，gamemode列对应ghosttype表中的ID     
-     public int getGameMode(){return this.mGameMode;}
+     public int getGamemode(){return this.mGamemode;}
      //默认是否开启速度     
-     public int getDefaultOpenSpeed(){return this.mDefaultOpenSpeed;}
+     public boolean getDefaultopenspeed(){return this.mDefaultopenspeed;}
      //方块下落速度(MS)     
-     public int getFallingSpeed(){return this.mFallingSpeed;}
+     public int getFallingspeed(){return this.mFallingspeed;}
      //GuideModeGroup表id 引导id组     
-     public int getGuideGroupId(){return this.mGuideGroupId;}
+     public int getGuidegroupid(){return this.mGuidegroupid;}
      //新玩法引导ID     
-     public int getGuideNewPlayStepID(){return this.mGuideNewPlayStepID;}
+     public int getGuidenewplaystepid(){return this.mGuidenewplaystepid;}
      //引导帮助ID     
-     public int getGuideHelpId(){return this.mGuideHelpId;}
+     public int getGuidehelpid(){return this.mGuidehelpid;}
      //棋盘背景图     
-     public int getBackground(){return this.mBackground;}
+     public String getBackground(){return this.mBackground;}
      //通关目标提示     
-     public int getLevelTargetMsg(){return this.mLevelTargetMsg;}
+     public String getLeveltargetmsg(){return this.mLeveltargetmsg;}
      //新功能开启Id     
-     public int getOpenFunctionID(){return this.mOpenFunctionID;}
+     public int getOpenfunctionid(){return this.mOpenfunctionid;}
      //OpenItem表 ID（开启后之后默认的关卡都开启）     
-     public int getOpenItem(){return this.mOpenItem;}
+     public String getOpenitem(){return this.mOpenitem;}
      //魔方生成道具ID     
-     public int getMoFangProduceItemId(){return this.mMoFangProduceItemId;}
+     public int getMofangproduceitemid(){return this.mMofangproduceitemid;}
      //是否为免费使用     
-     public int getBuyStepFreeofcharge(){return this.mBuyStepFreeofcharge;}
+     public boolean getBuystepfreeofcharge(){return this.mBuystepfreeofcharge;}
      //战前界面玩法背景图     
-     public int getBackImgId(){return this.mBackImgId;}
+     public int getBackimgid(){return this.mBackimgid;}
 
 
 }

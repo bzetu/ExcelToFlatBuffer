@@ -4,26 +4,28 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableConstConfig {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("ConstName")
-     private int mConstName;
-     @JsonProperty("ConstValue")
-     private int mConstValue;
+     private String mDesc;
+     @JsonProperty("Constname")
+     private String mConstname;
+     @JsonProperty("Constvalue")
+     private String mConstvalue;
 
 
      //#序号     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //常量名称     
-     public int getConstName(){return this.mConstName;}
+     public String getConstname(){return this.mConstname;}
      //常量值     
-     public int getConstValue(){return this.mConstValue;}
+     public String getConstvalue(){return this.mConstvalue;}
 
 
 }

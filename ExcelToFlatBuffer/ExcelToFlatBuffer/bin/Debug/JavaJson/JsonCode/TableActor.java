@@ -4,22 +4,24 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
+
+public class TableActor {
 
      @JsonProperty("Id")
      private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("EntityId")
-     private int mEntityId;
+     private String mDesc;
+     @JsonProperty("Entityid")
+     private int mEntityid;
 
 
-     //Block表ID     
+     //#Block表ID     
      public int getId(){return this.mId;}
      //程序不读     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //在Entity表中的Id     
-     public int getEntityId(){return this.mEntityId;}
+     public int getEntityid(){return this.mEntityid;}
 
 
 }

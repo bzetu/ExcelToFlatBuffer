@@ -1,0 +1,9 @@
+[
+{"Id": 0,"Desc": "不可行走路线","Resourceid": 60043},
+{"Id": 1,"Desc": "地图路线","Resourceid": 60038},
+{"Id": 2,"Desc": "地图出生点","Resourceid": 60038},
+{"Id": 3,"Desc": "地图鹰巢","Resourceid": 60040},
+{"Id": 4,"Desc": "地图草地","Resourceid": 60039},
+{"Id": 5,"Desc": "母鸡","Resourceid": 60041},
+{"Id": 6,"Desc": "小鹰","Resourceid": 60042}
+]

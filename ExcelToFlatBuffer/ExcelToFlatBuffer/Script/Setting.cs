@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 using System.IO;
 namespace ExcelToFlatBuffer
 {
-    public enum UseType
+    /// <summary>
+    /// 配置方案
+    /// </summary>
+    public enum SchemeType
     {
-        Client,
-        Server,
+        Client_CSharp_To_FlatBuffer,
+        Server_Java_To_Json,
+        UnKown,
     }
+
 
     public class Setting
     {
@@ -89,7 +94,28 @@ namespace ExcelToFlatBuffer
             }
         }
 
-
+        /// <summary>
+        /// 获取当前的配置方案
+        /// </summary>
+        /// <returns></returns>
+        public static SchemeType GetCurSchemeType()
+        {
+            UseType use = UserSetting.Instance.GetCurUseType();
+            LanguageType language = UserSetting.Instance.GetCurLanguageType();
+            AnalysisType analysis = UserSetting.Instance.GetCurAnalysisType();
+            if (use == UseType.Client && language == LanguageType.CSharp && analysis == AnalysisType.FlatBuffer)
+            {
+                return SchemeType.Client_CSharp_To_FlatBuffer;
+            }
+            else if (use == UseType.Server && language == LanguageType.Java && analysis == AnalysisType.Json)
+            {
+                return SchemeType.Server_Java_To_Json;
+            }
+            else
+            {
+                return SchemeType.UnKown;
+            }
+        }
 
     }
 }

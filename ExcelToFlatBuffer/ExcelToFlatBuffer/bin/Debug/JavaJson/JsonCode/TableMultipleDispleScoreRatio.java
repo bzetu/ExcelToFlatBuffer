@@ -4,22 +4,24 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableMultipleDispleScoreRatio {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
+     private String mDesc;
      @JsonProperty("Ratio")
-     private int mRatio;
+     private float mRatio;
 
 
      //#场景ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
-     //多行消除的积分倍率     
-     public int getRatio(){return this.mRatio;}
+     public String getDesc(){return this.mDesc;}
+     //多行消除的奖励积分倍率     
+     public float getRatio(){return this.mRatio;}
 
 
 }

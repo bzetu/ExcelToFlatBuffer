@@ -1,0 +1,7 @@
+[
+{"Id": 1001,"Desc": "关卡掉落1","Name": "关卡掉落1","Coincount": 10,"Diamondcount": 0,"Staminacount": 0,"Itemid": [1,2,3,0,0,0,0,0],"Count": [1,2,3,0,0,0,0,0]},
+{"Id": 1002,"Desc": "关卡掉落2","Name": "关卡掉落2","Coincount": 0,"Diamondcount": 10,"Staminacount": 0,"Itemid": [0,2,3,4,0,0,0,0],"Count": [0,2,3,4,0,0,0,0]},
+{"Id": 1003,"Desc": "关卡掉落3","Name": "关卡掉落3","Coincount": 0,"Diamondcount": 0,"Staminacount": 5,"Itemid": [0,0,3,4,5,0,0,0],"Count": [0,0,3,4,5,0,0,0]},
+{"Id": 3000,"Desc": "怪物掉落1","Name": "怪物掉落1","Coincount": 0,"Diamondcount": 0,"Staminacount": 0,"Itemid": [1,2,3,0,0,0,0,0],"Count": [1,2,3,0,0,0,0,0]},
+{"Id": 5000,"Desc": "怪物掉落2","Name": "怪物掉落2","Coincount": 0,"Diamondcount": 0,"Staminacount": 0,"Itemid": [1,2,3,0,0,0,0,0],"Count": [1,2,3,0,0,0,0,0]}
+]

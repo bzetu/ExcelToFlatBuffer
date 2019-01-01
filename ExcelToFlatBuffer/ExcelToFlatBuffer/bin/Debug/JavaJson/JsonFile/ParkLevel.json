@@ -1,0 +1,12 @@
+[
+{"Id": 1,"Desc": "游乐园等级1","Needexp": 900,"Addexp": 900,"Boxrequire": [300,600,900],"Boxreward": [1001,1002,1003],"Income": 100,"Max": 50000},
+{"Id": 2,"Desc": "游乐园等级2","Needexp": 2400,"Addexp": 1600,"Boxrequire": [480,960,1600],"Boxreward": [1001,1002,1003],"Income": 200,"Max": 100000},
+{"Id": 3,"Desc": "游乐园等级3","Needexp": 4800,"Addexp": 2400,"Boxrequire": [720,1440,2400],"Boxreward": [1001,1002,1003],"Income": 300,"Max": 150000},
+{"Id": 4,"Desc": "游乐园等级4","Needexp": 8000,"Addexp": 3200,"Boxrequire": [960,1920,3200],"Boxreward": [1001,1002,1003],"Income": 400,"Max": 200000},
+{"Id": 5,"Desc": "游乐园等级5","Needexp": 12000,"Addexp": 4000,"Boxrequire": [1200,2400,4000],"Boxreward": [1001,1002,1003],"Income": 500,"Max": 250000},
+{"Id": 6,"Desc": "游乐园等级6","Needexp": 16800,"Addexp": 4800,"Boxrequire": [1440,2880,4800],"Boxreward": [1001,1002,1003],"Income": 600,"Max": 300000},
+{"Id": 7,"Desc": "游乐园等级7","Needexp": 22400,"Addexp": 5600,"Boxrequire": [1680,3360,5600],"Boxreward": [1001,1002,1003],"Income": 700,"Max": 350000},
+{"Id": 8,"Desc": "游乐园等级8","Needexp": 28800,"Addexp": 6400,"Boxrequire": [1920,3840,6400],"Boxreward": [1001,1002,1003],"Income": 800,"Max": 400000},
+{"Id": 9,"Desc": "游乐园等级9","Needexp": 36000,"Addexp": 7200,"Boxrequire": [2160,4320,7200],"Boxreward": [1001,1002,1003],"Income": 900,"Max": 450000},
+{"Id": 10,"Desc": "游乐园等级10","Needexp": 44000,"Addexp": 8000,"Boxrequire": [2400,4800,8000],"Boxreward": [1001,1002,1003],"Income": 1000,"Max": 500000}
+]

@@ -4,54 +4,24 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableEagleChickMap {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("Column:0")
-     private int mColumn:0;
-     @JsonProperty("Column:1")
-     private int mColumn:1;
-     @JsonProperty("Column:2")
-     private int mColumn:2;
-     @JsonProperty("Column:3")
-     private int mColumn:3;
-     @JsonProperty("Column:4")
-     private int mColumn:4;
-     @JsonProperty("Column:5")
-     private int mColumn:5;
-     @JsonProperty("Column:6")
-     private int mColumn:6;
-     @JsonProperty("Column:7")
-     private int mColumn:7;
-     @JsonProperty("Column:8")
-     private int mColumn:8;
+     private String mDesc;
+     @JsonProperty("Column")
+     private List<Integer> mColumn;
 
 
      //#ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //第1列     
-     public int getColumn:0(){return this.mColumn:0;}
-     //第2列     
-     public int getColumn:1(){return this.mColumn:1;}
-     //第3列     
-     public int getColumn:2(){return this.mColumn:2;}
-     //第4列     
-     public int getColumn:3(){return this.mColumn:3;}
-     //第5列     
-     public int getColumn:4(){return this.mColumn:4;}
-     //第6列     
-     public int getColumn:5(){return this.mColumn:5;}
-     //第7列     
-     public int getColumn:6(){return this.mColumn:6;}
-     //第8列     
-     public int getColumn:7(){return this.mColumn:7;}
-     //第9列     
-     public int getColumn:8(){return this.mColumn:8;}
+     public List<Integer> getColumn(){return this.mColumn;}
 
 
 }

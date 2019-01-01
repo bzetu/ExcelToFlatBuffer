@@ -4,98 +4,68 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableMissionList {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
+     private String mDesc;
      @JsonProperty("Name")
-     private int mName;
-     @JsonProperty("IconID")
-     private int mIconID;
-     @JsonProperty("MissionType")
-     private int mMissionType;
-     @JsonProperty("PredecessorsId:0")
-     private int mPredecessorsId:0;
-     @JsonProperty("PredecessorsId:1")
-     private int mPredecessorsId:1;
-     @JsonProperty("PredecessorsId:2")
-     private int mPredecessorsId:2;
-     @JsonProperty("PredecessorsId:3")
-     private int mPredecessorsId:3;
-     @JsonProperty("PredecessorsId:4")
-     private int mPredecessorsId:4;
-     @JsonProperty("SuccessorId:0")
-     private int mSuccessorId:0;
-     @JsonProperty("SuccessorId:1")
-     private int mSuccessorId:1;
-     @JsonProperty("SuccessorId:2")
-     private int mSuccessorId:2;
-     @JsonProperty("SuccessorId:3")
-     private int mSuccessorId:3;
-     @JsonProperty("SuccessorId:4")
-     private int mSuccessorId:4;
+     private String mName;
+     @JsonProperty("Iconid")
+     private int mIconid;
+     @JsonProperty("Missiontype")
+     private int mMissiontype;
+     @JsonProperty("Predecessorsid")
+     private List<Integer> mPredecessorsid;
+     @JsonProperty("Successorid")
+     private List<Integer> mSuccessorid;
      @JsonProperty("Condition")
      private int mCondition;
-     @JsonProperty("ConditionCount")
-     private int mConditionCount;
-     @JsonProperty("OperationTimes")
-     private int mOperationTimes;
+     @JsonProperty("Conditioncount")
+     private int mConditioncount;
+     @JsonProperty("Operationtimes")
+     private int mOperationtimes;
      @JsonProperty("Experience")
      private int mExperience;
-     @JsonProperty("StoryId")
-     private int mStoryId;
-     @JsonProperty("BuildingId")
-     private int mBuildingId;
-     @JsonProperty("OneReplaceOne")
-     private int mOneReplaceOne;
+     @JsonProperty("Storyid")
+     private int mStoryid;
+     @JsonProperty("Buildingid")
+     private int mBuildingid;
+     @JsonProperty("Onereplaceone")
+     private String mOnereplaceone;
 
 
      //#任务ID（必须从1开始编号）     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //任务描述（不读）     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //任务名称     
-     public int getName(){return this.mName;}
+     public String getName(){return this.mName;}
      //任务图标ID（对应资源表Resource.txt）     
-     public int getIconID(){return this.mIconID;}
+     public int getIconid(){return this.mIconid;}
      //任务类型（1代表剧情任务，2代表每日任务，3代表活动任务，4代表随机任务）     
-     public int getMissionType(){return this.mMissionType;}
+     public int getMissiontype(){return this.mMissiontype;}
      //前置任务Id0     
-     public int getPredecessorsId:0(){return this.mPredecessorsId:0;}
-     //前置任务Id1     
-     public int getPredecessorsId:1(){return this.mPredecessorsId:1;}
-     //前置任务Id2     
-     public int getPredecessorsId:2(){return this.mPredecessorsId:2;}
-     //前置任务Id3     
-     public int getPredecessorsId:3(){return this.mPredecessorsId:3;}
-     //前置任务Id4     
-     public int getPredecessorsId:4(){return this.mPredecessorsId:4;}
+     public List<Integer> getPredecessorsid(){return this.mPredecessorsid;}
      //后续任务Id0     
-     public int getSuccessorId:0(){return this.mSuccessorId:0;}
-     //后续任务Id1     
-     public int getSuccessorId:1(){return this.mSuccessorId:1;}
-     //后续任务Id2     
-     public int getSuccessorId:2(){return this.mSuccessorId:2;}
-     //后续任务Id3     
-     public int getSuccessorId:3(){return this.mSuccessorId:3;}
-     //后续任务Id4     
-     public int getSuccessorId:4(){return this.mSuccessorId:4;}
+     public List<Integer> getSuccessorid(){return this.mSuccessorid;}
      //任务条件(0代表不需要任何条件即可完成任务，1代表对话任务（消耗星星即可完成），2代表播放剧情的操作任务（需执行剧情操作再完成任务，是否消耗星星根据任务条件的需求数量来定），3代表先选择奖励再播放剧情的操作任务（弹出三选一界面，需选择奖励并播放剧情后完成任务，是否消耗星星根据任务条件的需求数量来定）)     
      public int getCondition(){return this.mCondition;}
      //任务条件的需求数量（扣除星星数目）     
-     public int getConditionCount(){return this.mConditionCount;}
+     public int getConditioncount(){return this.mConditioncount;}
      //任务操作次数（0代表可无限次操作，1以上代表可操作次数）     
-     public int getOperationTimes(){return this.mOperationTimes;}
+     public int getOperationtimes(){return this.mOperationtimes;}
      //任务奖励经验     
      public int getExperience(){return this.mExperience;}
      //任务触发剧情的Id（对应剧情表Story.txt）     
-     public int getStoryId(){return this.mStoryId;}
+     public int getStoryid(){return this.mStoryid;}
      //任务解锁建筑的Id（对应建筑表Building.txt）     
-     public int getBuildingId(){return this.mBuildingId;}
+     public int getBuildingid(){return this.mBuildingid;}
      //用于给城建管理器发送建筑一换一信息，冒号之前是建筑的Id（对应建筑表Building.txt），冒号之后是新建筑的资源Id     
-     public int getOneReplaceOne(){return this.mOneReplaceOne;}
+     public String getOnereplaceone(){return this.mOnereplaceone;}
 
 
 }

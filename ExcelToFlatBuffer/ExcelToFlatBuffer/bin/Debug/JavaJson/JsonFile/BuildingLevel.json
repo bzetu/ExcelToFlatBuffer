@@ -1,7 +1,17 @@
 [
-{"#int": 1,"string": "世界树","int": 7,"int": 1,"int": 1000,"float": 0.1,"int": 1,"string": "#{Building_1}"},
-{"#int": 2,"string": "世界树","int": 7,"int": 2,"int": 2000,"float": 0.2,"int": 2,"string": "#{Building_1}"},
-{"#int": 3,"string": "世界树","int": 7,"int": 3,"int": 3000,"float": 0.3,"int": 3,"string": "#{Building_1}"},
-{"#int": 4,"string": "世界树","int": 7,"int": 4,"int": 4000,"float": 0.4,"int": 4,"string": "#{Building_1}"},
-{"#int": 5,"string": "世界树","int": 7,"int": 5,"int": 5000,"float": 0.5,"int": 5,"string": "#{Building_1}"}
+{"Id": 1,"Desc": "世界树","Buildingid": 1,"Buildlevel": 1,"Costgold": 500,"Income": 0.1,"Limit": 1,"Name": "#{Building_1}"},
+{"Id": 2,"Desc": "世界树","Buildingid": 1,"Buildlevel": 2,"Costgold": 1000,"Income": 0.2,"Limit": 2,"Name": "#{Building_1}"},
+{"Id": 3,"Desc": "世界树","Buildingid": 1,"Buildlevel": 3,"Costgold": 1500,"Income": 0.3,"Limit": 3,"Name": "#{Building_1}"},
+{"Id": 4,"Desc": "世界树","Buildingid": 1,"Buildlevel": 4,"Costgold": 2000,"Income": 0.4,"Limit": 4,"Name": "#{Building_1}"},
+{"Id": 5,"Desc": "世界树","Buildingid": 1,"Buildlevel": 5,"Costgold": 2500,"Income": 0.5,"Limit": 5,"Name": "#{Building_1}"},
+{"Id": 6,"Desc": "世界树","Buildingid": 2,"Buildlevel": 1,"Costgold": 1000,"Income": 0.1,"Limit": 1,"Name": "#{Building_1}"},
+{"Id": 7,"Desc": "世界树","Buildingid": 2,"Buildlevel": 2,"Costgold": 2000,"Income": 0.2,"Limit": 2,"Name": "#{Building_1}"},
+{"Id": 8,"Desc": "世界树","Buildingid": 2,"Buildlevel": 3,"Costgold": 3000,"Income": 0.3,"Limit": 3,"Name": "#{Building_1}"},
+{"Id": 9,"Desc": "世界树","Buildingid": 2,"Buildlevel": 4,"Costgold": 4000,"Income": 0.4,"Limit": 4,"Name": "#{Building_1}"},
+{"Id": 10,"Desc": "世界树","Buildingid": 2,"Buildlevel": 5,"Costgold": 5000,"Income": 0.5,"Limit": 5,"Name": "#{Building_1}"},
+{"Id": 11,"Desc": "世界树","Buildingid": 7,"Buildlevel": 1,"Costgold": 1000,"Income": 0.1,"Limit": 1,"Name": "#{Building_1}"},
+{"Id": 12,"Desc": "世界树","Buildingid": 7,"Buildlevel": 2,"Costgold": 2000,"Income": 0.2,"Limit": 2,"Name": "#{Building_1}"},
+{"Id": 13,"Desc": "世界树","Buildingid": 7,"Buildlevel": 3,"Costgold": 3000,"Income": 0.3,"Limit": 3,"Name": "#{Building_1}"},
+{"Id": 14,"Desc": "世界树","Buildingid": 7,"Buildlevel": 4,"Costgold": 4000,"Income": 0.4,"Limit": 4,"Name": "#{Building_1}"},
+{"Id": 15,"Desc": "世界树","Buildingid": 7,"Buildlevel": 5,"Costgold": 5000,"Income": 0.5,"Limit": 5,"Name": "#{Building_1}"}
 ]

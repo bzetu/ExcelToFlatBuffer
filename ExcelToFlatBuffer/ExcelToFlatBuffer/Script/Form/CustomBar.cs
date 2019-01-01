@@ -136,7 +136,7 @@ namespace ExcelToFlatBuffer
             CustomBarCell cell = new CustomBarCell(m_cellList.Count);
             cell.m_OnBtnClickEvent += OnBtnClick_Tab;
             m_cellList.Add(cell);
-            ProSetting.Instance.AddCustomBarCell(cell.m_cellInfo);
+            UserSetting.Instance.AddCustomBarCell(cell.m_cellInfo);
         }
 
         public void AddElement(Setting_CustomBarCellData data)
@@ -152,7 +152,7 @@ namespace ExcelToFlatBuffer
         public CustomBar(OnSelectEvent onSelect = null)
         {
             this.m_onSelectEvent = onSelect;
-            List<Setting_CustomBarCellData> settingList = ProSetting.Instance.GetCustomBarCellList();
+            List<Setting_CustomBarCellData> settingList = UserSetting.Instance.GetCustomBarCellList();
             int count = settingList.Count;
             if (count > 0)
             {
@@ -169,11 +169,11 @@ namespace ExcelToFlatBuffer
             }
             ShowEditButton(true);
 
-            int curSelectIndex = ProSetting.Instance.curSelectTabIndex < m_cellList.Count ? ProSetting.Instance.curSelectTabIndex : 0;
+            int curSelectIndex = UserSetting.Instance.curSelectTabIndex < m_cellList.Count ? UserSetting.Instance.curSelectTabIndex : 0;
             m_cellList[curSelectIndex].UI_Button.Select();
             if (m_onSelectEvent != null)
                 m_onSelectEvent.Invoke(curSelectIndex);
-            ProSetting.Instance.curSelectTabIndex = curSelectIndex;
+            UserSetting.Instance.curSelectTabIndex = curSelectIndex;
             
         }
 
@@ -195,11 +195,11 @@ namespace ExcelToFlatBuffer
         }
         private void OnBtnClick_EditFinish(object sender, EventArgs e)
         {
-            int tabIndex = ProSetting.Instance.curSelectTabIndex;
+            int tabIndex = UserSetting.Instance.curSelectTabIndex;
             if (tabIndex < m_cellList.Count)
             {
                 Setting_CustomBarCellData newData = m_cellList[tabIndex].EditComplete();
-                ProSetting.Instance.SetTableCellData(tabIndex, newData);
+                UserSetting.Instance.SetTableCellData(tabIndex, newData);
             }
             ShowEditButton(true);
         }
@@ -219,12 +219,12 @@ namespace ExcelToFlatBuffer
                 MessageBox.Show("至少保留一个方案", "提示");
                 return;
             }
-            int tabIndex = ProSetting.Instance.curSelectTabIndex;
+            int tabIndex = UserSetting.Instance.curSelectTabIndex;
             if (tabIndex < m_cellList.Count)
             {
                 m_cellList[tabIndex].RemoveUI();
                 m_cellList.RemoveAt(tabIndex);
-                ProSetting.Instance.RemoveCustomBarCell(tabIndex);
+                UserSetting.Instance.RemoveCustomBarCell(tabIndex);
             }
             for (int i = 0; i < m_cellList.Count; i++)
             {
@@ -234,14 +234,14 @@ namespace ExcelToFlatBuffer
 
         private void OnBtnClick_Tab(int btnIndex)
         {
-            ProSetting.Instance.curSelectTabIndex = btnIndex;
+            UserSetting.Instance.curSelectTabIndex = btnIndex;
             if (m_onSelectEvent != null)
                 m_onSelectEvent.Invoke(btnIndex);
         }
 
         public void OnBtnClick_Change(object sender, EventArgs e)
         {
-            int tabIndex = ProSetting.Instance.curSelectTabIndex;
+            int tabIndex = UserSetting.Instance.curSelectTabIndex;
             if (tabIndex < m_cellList.Count)
             {
                 m_cellList[tabIndex].Edit();

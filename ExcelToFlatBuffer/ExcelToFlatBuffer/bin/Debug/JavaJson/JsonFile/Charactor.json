@@ -1,6 +1,6 @@
 [
-{"#int": 1,"string": "白雪公主","int": 59001,"float": 34.6,"float": 16.38,"float": 73.7},
-{"#int": 2,"string": "女主","int": 59002,"float": 35.66,"float": 16.35,"float": 74.676},
-{"#int": 3,"string": "小红帽","int": 59003,"float": 35.69,"float": 16.36,"float": 73.7},
-{"#int": 4,"string": "小矮人","int": 59004,"float": 36.934,"float": 16.383,"float": 73.548}
+{"Id": 1,"Desc": "白雪公主","Model": 59001,"Positionx": 34.6,"Positiony": 16.38,"Positionz": 73.7},
+{"Id": 2,"Desc": "女主","Model": 59002,"Positionx": 35.66,"Positiony": 16.35,"Positionz": 74.676},
+{"Id": 3,"Desc": "小红帽","Model": 59003,"Positionx": 35.69,"Positiony": 16.36,"Positionz": 73.7},
+{"Id": 4,"Desc": "小矮人","Model": 59004,"Positionx": 36.934,"Positiony": 16.383,"Positionz": 73.548}
 ]

@@ -4,16 +4,18 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
 public class TableLevelTarget {
 
-     @JsonProperty("#Id")
-     private int m#Id;
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
+     private String mDesc;
      @JsonProperty("Type")
      private int mType;
-     @JsonProperty("ElementId")
-     private int mElementId;
+     @JsonProperty("Elementid")
+     private int mElementid;
      @JsonProperty("Count")
      private int mCount;
      @JsonProperty("Rate")
@@ -21,13 +23,13 @@ public class TableLevelTarget {
 
 
      //#目标ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //通关类型（元素=0 消行=1 基础块=2 覆盖类=3 生产类=4）     
      public int getType(){return this.mType;}
      //元素Id（Element表)     
-     public int getElementId(){return this.mElementId;}
+     public int getElementid(){return this.mElementid;}
      //通关数量     
      public int getCount(){return this.mCount;}
      //选取概率(单个目标的选中概率等于该目标的权重/所有目标的权重和）     

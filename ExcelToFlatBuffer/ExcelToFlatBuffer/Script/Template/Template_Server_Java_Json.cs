@@ -81,22 +81,24 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {{
+import java.util.List;
 
-{0}
+public class Table{0} {{
 
 {1}
+
+{2}
 
 }}";
 
         public static string Template_SingleTableCodeWord =
 @"     @JsonProperty(""{0}"")
-     private int m{1};
+     private {1} m{2};
 ";
 
         public static string Template_SingleTableCodeWordGet =
 @"     //{0}     
-     public int get{1}(){{return this.m{2};}}
+     public {1} get{2}(){{return this.m{3};}}
 ";
 
         public static string Template_Json = 

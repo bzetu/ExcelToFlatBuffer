@@ -19,18 +19,21 @@ namespace ExcelToFlatBuffer
         private int m_lastSelectTabIndex;
         public override void OnAwake()
         {
+           
             Console.WriteLine("OnAwake");
             InitializeComponent();
         }
 
         public override void OnStart()
         {
-            m_lastSelectTabIndex = ProSetting.Instance.curSelectTabIndex;
+            InitDropList();
+
+            m_lastSelectTabIndex = UserSetting.Instance.curSelectTabIndex;
             Debug.Init(ListBox_Log);
 
             m_customBar = new CustomBar(OnTabSelect);
 
-            InitDropList();
+            
             this.ListBox_Log.DrawMode = DrawMode.OwnerDrawVariable;
             this.ListBox_Log.DrawItem += new DrawItemEventHandler(ListBoxGroupRange_DrawItem);
             this.ListBox_Log.MeasureItem += new MeasureItemEventHandler(ListBoxGroupRange_MeasureItem);
@@ -45,8 +48,9 @@ namespace ExcelToFlatBuffer
             this.UI_DropList_Use.Items.Add("Client");
             this.UI_DropList_Use.Items.Add("Server");
 
-            this.UI_DropList_Language.SelectedIndex = 0;
-            this.UI_DropList_Use.SelectedIndex = 0;
+            this.UI_DropList_Analysis.Items.Add("FlatBuffer");
+            this.UI_DropList_Analysis.Items.Add("Json");
+
         }
 
         public override void OnUpdate()
@@ -56,12 +60,12 @@ namespace ExcelToFlatBuffer
 
         public override void OnClose()
         {
-            if (ProSetting.Instance.IsDrty)
+            if (UserSetting.Instance.IsDrty)
             {
                 DialogResult result = MessageBox.Show("你有修改未保存,需要先保存再退出吗？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.OK)
                 {
-                    ProSetting.Instance.Save();
+                    UserSetting.Instance.Save();
                 }
             }
            
@@ -170,13 +174,6 @@ namespace ExcelToFlatBuffer
 
         }
 
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -189,8 +186,8 @@ namespace ExcelToFlatBuffer
 
         private void OnBtnClick_SaveSetting(object sender, EventArgs e)
         {
-            UpdateProSettingPath();
-            if (ProSetting.Instance.Save())
+            UpdateUserSettingPath();
+            if (UserSetting.Instance.Save())
                MessageBox.Show("保存成功!", "提示");
             else
                MessageBox.Show("保存失败!请检查日志", "提示");
@@ -204,22 +201,47 @@ namespace ExcelToFlatBuffer
         {
             if (m_lastSelectTabIndex != index)
             {
-                UpdateProSettingPath();
+                UpdateUserSettingPath();
                 m_lastSelectTabIndex = index;
             }
 
-            Setting_CustomBarCellData data = ProSetting.Instance.GetTabCellData(index);
+            Setting_CustomBarCellData data = UserSetting.Instance.GetTabCellData(index);
             TextField_ExcelPaths.Text = data.Path_Excel;
             TextField_CodePaths.Text = data.Path_OutCode;
             TextField_BytesPaths.Text = data.Path_OutByte;
+
+
+
+            this.UI_DropList_Language.SelectedIndex = data.LanguageType;
+            this.UI_DropList_Use.SelectedIndex = data.UseType;
+            this.UI_DropList_Analysis.SelectedIndex = data.AnalysisType;
 
             Console.WriteLine("OnTabSelect:" + index.ToString());
         }
 
 
-        public void UpdateProSettingPath()
+        public void UpdateUserSettingPath()
         {
-            ProSetting.Instance.SavePath(m_lastSelectTabIndex, TextField_ExcelPaths.Text, TextField_CodePaths.Text, TextField_BytesPaths.Text);
+            UserSetting.Instance.SavePath(m_lastSelectTabIndex, TextField_ExcelPaths.Text, TextField_CodePaths.Text, TextField_BytesPaths.Text);
+        }
+
+        private void UI_DropList_Analysis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Console.WriteLine("SelectedIndex:"+this.UI_DropList_Analysis.SelectedIndex.ToString());
+            UserSetting.Instance.SetAnalysisType(m_lastSelectTabIndex,(AnalysisType)this.UI_DropList_Analysis.SelectedIndex);
+        }
+
+
+        private void UI_DropList_Language_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Console.WriteLine("SelectedIndex:" + this.UI_DropList_Language.SelectedIndex.ToString());
+            UserSetting.Instance.SetLanguageType(m_lastSelectTabIndex, (LanguageType)this.UI_DropList_Language.SelectedIndex);
+        }
+
+        private void UI_DropList_Use_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Console.WriteLine("SelectedIndex:" + this.UI_DropList_Use.SelectedIndex.ToString());
+            UserSetting.Instance.SetUseType(m_lastSelectTabIndex, (UseType)this.UI_DropList_Use.SelectedIndex);
         }
     }
 }

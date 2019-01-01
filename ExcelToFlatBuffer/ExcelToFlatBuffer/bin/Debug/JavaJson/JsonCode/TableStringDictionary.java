@@ -4,26 +4,28 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableStringDictionary {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("StringIndex")
-     private int mStringIndex;
-     @JsonProperty("StringContent")
-     private int mStringContent;
+     private String mDesc;
+     @JsonProperty("Stringindex")
+     private String mStringindex;
+     @JsonProperty("Stringcontent")
+     private String mStringcontent;
 
 
      //#序号     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //索引     
-     public int getStringIndex(){return this.mStringIndex;}
+     public String getStringindex(){return this.mStringindex;}
      //内容     
-     public int getStringContent(){return this.mStringContent;}
+     public String getStringcontent(){return this.mStringcontent;}
 
 
 }

@@ -1,11 +1,11 @@
 [
-{"#int": 0,"string": "金手指","int": 13004,"string": "Icons/Item_Gold_finger","int": 43,"int": 0},
-{"#int": 1,"string": "万能块","int": 13005,"string": "Icons/Item_WNK","int": 44,"int": 0},
-{"#int": 2,"string": "小锤子","int": 13006,"string": "Icons/Item_Hammer","int": 46,"int": 0},
-{"#int": 3,"string": "加步数","int": 13007,"string": "Icons/Item_StepNumber","int": 75,"int": 1},
-{"#int": 4,"string": "后退一步","int": 13008,"string": "Icons/Item_BackOff","int": 73,"int": 0},
-{"#int": 5,"string": "连锁闪电","int": 13009,"string": "Icons/Item_Lightning","int": 74,"int": 0},
-{"#int": 6,"string": "双倍飞机","int": 13010,"string": "Icons/Item_aircraft","int": 0,"int": 1},
-{"#int": 7,"string": "双倍泡泡糖","int": 13011,"string": "Icons/Item_paopaotang","int": 0,"int": 1},
-{"#int": 8,"string": "礼盒","int": 13012,"string": "Icons/Item_mofang","int": 0,"int": 1}
+{"Id": 0,"Desc": "金手指","Iconid": 13004,"Icon": "Icons/Item_Gold_finger","Effectid": 43,"Showtype": 0},
+{"Id": 1,"Desc": "万能块","Iconid": 13005,"Icon": "Icons/Item_WNK","Effectid": 44,"Showtype": 0},
+{"Id": 2,"Desc": "小锤子","Iconid": 13006,"Icon": "Icons/Item_Hammer","Effectid": 46,"Showtype": 0},
+{"Id": 3,"Desc": "加步数","Iconid": 13007,"Icon": "Icons/Item_StepNumber","Effectid": 75,"Showtype": 1},
+{"Id": 4,"Desc": "后退一步","Iconid": 13008,"Icon": "Icons/Item_BackOff","Effectid": 73,"Showtype": 0},
+{"Id": 5,"Desc": "连锁闪电","Iconid": 13009,"Icon": "Icons/Item_Lightning","Effectid": 74,"Showtype": 0},
+{"Id": 6,"Desc": "双倍飞机","Iconid": 13010,"Icon": "Icons/Item_aircraft","Effectid": 0,"Showtype": 1},
+{"Id": 7,"Desc": "双倍泡泡糖","Iconid": 13011,"Icon": "Icons/Item_paopaotang","Effectid": 0,"Showtype": 1},
+{"Id": 8,"Desc": "礼盒","Iconid": 13012,"Icon": "Icons/Item_mofang","Effectid": 0,"Showtype": 1}
 ]

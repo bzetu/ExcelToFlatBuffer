@@ -4,34 +4,36 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableCommonItem {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("IconId")
-     private int mIconId;
+     private String mDesc;
+     @JsonProperty("Iconid")
+     private int mIconid;
      @JsonProperty("Icon")
-     private int mIcon;
-     @JsonProperty("EffectId")
-     private int mEffectId;
-     @JsonProperty("ShowType")
-     private int mShowType;
+     private String mIcon;
+     @JsonProperty("Effectid")
+     private int mEffectid;
+     @JsonProperty("Showtype")
+     private int mShowtype;
 
 
      //#物品ID（暂时没有考虑分段，等后续策划设计时再进行id分段）     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //图标资源ID     
-     public int getIconId(){return this.mIconId;}
+     public int getIconid(){return this.mIconid;}
      //图标（ps：等后续使用时自行修改吧。资源路径问题应该也会同意配置的。）     
-     public int getIcon(){return this.mIcon;}
+     public String getIcon(){return this.mIcon;}
      //特效Id     
-     public int getEffectId(){return this.mEffectId;}
+     public int getEffectid(){return this.mEffectid;}
      //显示类型（0-道具栏 1-关卡信息）     
-     public int getShowType(){return this.mShowType;}
+     public int getShowtype(){return this.mShowtype;}
 
 
 }

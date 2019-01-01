@@ -34,10 +34,10 @@ namespace ExcelToFlatBuffer
                 m_form.Close();
         }
 
-        public static void UpdateProSettingPath()
+        public static void UpdateUserSettingPath()
         {
             if (m_form != null)
-                m_form.UpdateProSettingPath();
+                m_form.UpdateUserSettingPath();
         }
 
 

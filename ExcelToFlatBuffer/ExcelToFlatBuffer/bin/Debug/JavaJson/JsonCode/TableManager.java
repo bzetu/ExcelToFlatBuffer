@@ -717,6 +717,710 @@ public class TableManager {
     public static final TIntObjectIterator<TableGameLevels> getGameLevelsByIterator() {
         return gGameLevelsMap.iterator();
     }
+    private static ArrayList<TableLevelAward> gLevelAwardArray = null;
+    private static TIntObjectHashMap<TableLevelAward> gLevelAwardMap = new TIntObjectHashMap<TableLevelAward>();
+
+    private static boolean initTableLevelAward() {
+        try {
+            gLevelAwardMap.clear();
+            gLevelAwardArray = TableUtility.LoadJsonTable("LevelAward.json", TableLevelAward.class);
+            for (TableLevelAward table : gLevelAwardArray) {
+                gLevelAwardMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableLevelAward getLevelAwardByID(int nKey){
+        return gLevelAwardMap.get(nKey);
+    }
+
+    public static final TableLevelAward getLevelAwardByIndex(int nIdx){
+        return gLevelAwardArray.get(nIdx);
+    }
+
+    public static final int getLevelAwardSize(){
+        return gLevelAwardArray.size();
+    }
+
+    public static final TIntObjectIterator<TableLevelAward> getLevelAwardByIterator() {
+        return gLevelAwardMap.iterator();
+    }
+    private static ArrayList<TableLevelAward> gLevelAwardArray = null;
+    private static TIntObjectHashMap<TableLevelAward> gLevelAwardMap = new TIntObjectHashMap<TableLevelAward>();
+
+    private static boolean initTableLevelAward() {
+        try {
+            gLevelAwardMap.clear();
+            gLevelAwardArray = TableUtility.LoadJsonTable("LevelAward.json", TableLevelAward.class);
+            for (TableLevelAward table : gLevelAwardArray) {
+                gLevelAwardMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableLevelAward getLevelAwardByID(int nKey){
+        return gLevelAwardMap.get(nKey);
+    }
+
+    public static final TableLevelAward getLevelAwardByIndex(int nIdx){
+        return gLevelAwardArray.get(nIdx);
+    }
+
+    public static final int getLevelAwardSize(){
+        return gLevelAwardArray.size();
+    }
+
+    public static final TIntObjectIterator<TableLevelAward> getLevelAwardByIterator() {
+        return gLevelAwardMap.iterator();
+    }
+    private static ArrayList<TableLevelTarget> gLevelTargetArray = null;
+    private static TIntObjectHashMap<TableLevelTarget> gLevelTargetMap = new TIntObjectHashMap<TableLevelTarget>();
+
+    private static boolean initTableLevelTarget() {
+        try {
+            gLevelTargetMap.clear();
+            gLevelTargetArray = TableUtility.LoadJsonTable("LevelTarget.json", TableLevelTarget.class);
+            for (TableLevelTarget table : gLevelTargetArray) {
+                gLevelTargetMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableLevelTarget getLevelTargetByID(int nKey){
+        return gLevelTargetMap.get(nKey);
+    }
+
+    public static final TableLevelTarget getLevelTargetByIndex(int nIdx){
+        return gLevelTargetArray.get(nIdx);
+    }
+
+    public static final int getLevelTargetSize(){
+        return gLevelTargetArray.size();
+    }
+
+    public static final TIntObjectIterator<TableLevelTarget> getLevelTargetByIterator() {
+        return gLevelTargetMap.iterator();
+    }
+    private static ArrayList<TableLevelTarget> gLevelTargetArray = null;
+    private static TIntObjectHashMap<TableLevelTarget> gLevelTargetMap = new TIntObjectHashMap<TableLevelTarget>();
+
+    private static boolean initTableLevelTarget() {
+        try {
+            gLevelTargetMap.clear();
+            gLevelTargetArray = TableUtility.LoadJsonTable("LevelTarget.json", TableLevelTarget.class);
+            for (TableLevelTarget table : gLevelTargetArray) {
+                gLevelTargetMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableLevelTarget getLevelTargetByID(int nKey){
+        return gLevelTargetMap.get(nKey);
+    }
+
+    public static final TableLevelTarget getLevelTargetByIndex(int nIdx){
+        return gLevelTargetArray.get(nIdx);
+    }
+
+    public static final int getLevelTargetSize(){
+        return gLevelTargetArray.size();
+    }
+
+    public static final TIntObjectIterator<TableLevelTarget> getLevelTargetByIterator() {
+        return gLevelTargetMap.iterator();
+    }
+    private static ArrayList<TableMissionList> gMissionListArray = null;
+    private static TIntObjectHashMap<TableMissionList> gMissionListMap = new TIntObjectHashMap<TableMissionList>();
+
+    private static boolean initTableMissionList() {
+        try {
+            gMissionListMap.clear();
+            gMissionListArray = TableUtility.LoadJsonTable("MissionList.json", TableMissionList.class);
+            for (TableMissionList table : gMissionListArray) {
+                gMissionListMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableMissionList getMissionListByID(int nKey){
+        return gMissionListMap.get(nKey);
+    }
+
+    public static final TableMissionList getMissionListByIndex(int nIdx){
+        return gMissionListArray.get(nIdx);
+    }
+
+    public static final int getMissionListSize(){
+        return gMissionListArray.size();
+    }
+
+    public static final TIntObjectIterator<TableMissionList> getMissionListByIterator() {
+        return gMissionListMap.iterator();
+    }
+    private static ArrayList<TableMissionList> gMissionListArray = null;
+    private static TIntObjectHashMap<TableMissionList> gMissionListMap = new TIntObjectHashMap<TableMissionList>();
+
+    private static boolean initTableMissionList() {
+        try {
+            gMissionListMap.clear();
+            gMissionListArray = TableUtility.LoadJsonTable("MissionList.json", TableMissionList.class);
+            for (TableMissionList table : gMissionListArray) {
+                gMissionListMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableMissionList getMissionListByID(int nKey){
+        return gMissionListMap.get(nKey);
+    }
+
+    public static final TableMissionList getMissionListByIndex(int nIdx){
+        return gMissionListArray.get(nIdx);
+    }
+
+    public static final int getMissionListSize(){
+        return gMissionListArray.size();
+    }
+
+    public static final TIntObjectIterator<TableMissionList> getMissionListByIterator() {
+        return gMissionListMap.iterator();
+    }
+    private static ArrayList<TableMoFangProduceItem> gMoFangProduceItemArray = null;
+    private static TIntObjectHashMap<TableMoFangProduceItem> gMoFangProduceItemMap = new TIntObjectHashMap<TableMoFangProduceItem>();
+
+    private static boolean initTableMoFangProduceItem() {
+        try {
+            gMoFangProduceItemMap.clear();
+            gMoFangProduceItemArray = TableUtility.LoadJsonTable("MoFangProduceItem.json", TableMoFangProduceItem.class);
+            for (TableMoFangProduceItem table : gMoFangProduceItemArray) {
+                gMoFangProduceItemMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableMoFangProduceItem getMoFangProduceItemByID(int nKey){
+        return gMoFangProduceItemMap.get(nKey);
+    }
+
+    public static final TableMoFangProduceItem getMoFangProduceItemByIndex(int nIdx){
+        return gMoFangProduceItemArray.get(nIdx);
+    }
+
+    public static final int getMoFangProduceItemSize(){
+        return gMoFangProduceItemArray.size();
+    }
+
+    public static final TIntObjectIterator<TableMoFangProduceItem> getMoFangProduceItemByIterator() {
+        return gMoFangProduceItemMap.iterator();
+    }
+    private static ArrayList<TableMoFangProduceItem> gMoFangProduceItemArray = null;
+    private static TIntObjectHashMap<TableMoFangProduceItem> gMoFangProduceItemMap = new TIntObjectHashMap<TableMoFangProduceItem>();
+
+    private static boolean initTableMoFangProduceItem() {
+        try {
+            gMoFangProduceItemMap.clear();
+            gMoFangProduceItemArray = TableUtility.LoadJsonTable("MoFangProduceItem.json", TableMoFangProduceItem.class);
+            for (TableMoFangProduceItem table : gMoFangProduceItemArray) {
+                gMoFangProduceItemMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableMoFangProduceItem getMoFangProduceItemByID(int nKey){
+        return gMoFangProduceItemMap.get(nKey);
+    }
+
+    public static final TableMoFangProduceItem getMoFangProduceItemByIndex(int nIdx){
+        return gMoFangProduceItemArray.get(nIdx);
+    }
+
+    public static final int getMoFangProduceItemSize(){
+        return gMoFangProduceItemArray.size();
+    }
+
+    public static final TIntObjectIterator<TableMoFangProduceItem> getMoFangProduceItemByIterator() {
+        return gMoFangProduceItemMap.iterator();
+    }
+    private static ArrayList<TableMultipleDispleScoreRatio> gMultipleDispleScoreRatioArray = null;
+    private static TIntObjectHashMap<TableMultipleDispleScoreRatio> gMultipleDispleScoreRatioMap = new TIntObjectHashMap<TableMultipleDispleScoreRatio>();
+
+    private static boolean initTableMultipleDispleScoreRatio() {
+        try {
+            gMultipleDispleScoreRatioMap.clear();
+            gMultipleDispleScoreRatioArray = TableUtility.LoadJsonTable("MultipleDispleScoreRatio.json", TableMultipleDispleScoreRatio.class);
+            for (TableMultipleDispleScoreRatio table : gMultipleDispleScoreRatioArray) {
+                gMultipleDispleScoreRatioMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableMultipleDispleScoreRatio getMultipleDispleScoreRatioByID(int nKey){
+        return gMultipleDispleScoreRatioMap.get(nKey);
+    }
+
+    public static final TableMultipleDispleScoreRatio getMultipleDispleScoreRatioByIndex(int nIdx){
+        return gMultipleDispleScoreRatioArray.get(nIdx);
+    }
+
+    public static final int getMultipleDispleScoreRatioSize(){
+        return gMultipleDispleScoreRatioArray.size();
+    }
+
+    public static final TIntObjectIterator<TableMultipleDispleScoreRatio> getMultipleDispleScoreRatioByIterator() {
+        return gMultipleDispleScoreRatioMap.iterator();
+    }
+    private static ArrayList<TableMultipleDispleScoreRatio> gMultipleDispleScoreRatioArray = null;
+    private static TIntObjectHashMap<TableMultipleDispleScoreRatio> gMultipleDispleScoreRatioMap = new TIntObjectHashMap<TableMultipleDispleScoreRatio>();
+
+    private static boolean initTableMultipleDispleScoreRatio() {
+        try {
+            gMultipleDispleScoreRatioMap.clear();
+            gMultipleDispleScoreRatioArray = TableUtility.LoadJsonTable("MultipleDispleScoreRatio.json", TableMultipleDispleScoreRatio.class);
+            for (TableMultipleDispleScoreRatio table : gMultipleDispleScoreRatioArray) {
+                gMultipleDispleScoreRatioMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableMultipleDispleScoreRatio getMultipleDispleScoreRatioByID(int nKey){
+        return gMultipleDispleScoreRatioMap.get(nKey);
+    }
+
+    public static final TableMultipleDispleScoreRatio getMultipleDispleScoreRatioByIndex(int nIdx){
+        return gMultipleDispleScoreRatioArray.get(nIdx);
+    }
+
+    public static final int getMultipleDispleScoreRatioSize(){
+        return gMultipleDispleScoreRatioArray.size();
+    }
+
+    public static final TIntObjectIterator<TableMultipleDispleScoreRatio> getMultipleDispleScoreRatioByIterator() {
+        return gMultipleDispleScoreRatioMap.iterator();
+    }
+    private static ArrayList<TableParkLevel> gParkLevelArray = null;
+    private static TIntObjectHashMap<TableParkLevel> gParkLevelMap = new TIntObjectHashMap<TableParkLevel>();
+
+    private static boolean initTableParkLevel() {
+        try {
+            gParkLevelMap.clear();
+            gParkLevelArray = TableUtility.LoadJsonTable("ParkLevel.json", TableParkLevel.class);
+            for (TableParkLevel table : gParkLevelArray) {
+                gParkLevelMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableParkLevel getParkLevelByID(int nKey){
+        return gParkLevelMap.get(nKey);
+    }
+
+    public static final TableParkLevel getParkLevelByIndex(int nIdx){
+        return gParkLevelArray.get(nIdx);
+    }
+
+    public static final int getParkLevelSize(){
+        return gParkLevelArray.size();
+    }
+
+    public static final TIntObjectIterator<TableParkLevel> getParkLevelByIterator() {
+        return gParkLevelMap.iterator();
+    }
+    private static ArrayList<TableParkLevel> gParkLevelArray = null;
+    private static TIntObjectHashMap<TableParkLevel> gParkLevelMap = new TIntObjectHashMap<TableParkLevel>();
+
+    private static boolean initTableParkLevel() {
+        try {
+            gParkLevelMap.clear();
+            gParkLevelArray = TableUtility.LoadJsonTable("ParkLevel.json", TableParkLevel.class);
+            for (TableParkLevel table : gParkLevelArray) {
+                gParkLevelMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableParkLevel getParkLevelByID(int nKey){
+        return gParkLevelMap.get(nKey);
+    }
+
+    public static final TableParkLevel getParkLevelByIndex(int nIdx){
+        return gParkLevelArray.get(nIdx);
+    }
+
+    public static final int getParkLevelSize(){
+        return gParkLevelArray.size();
+    }
+
+    public static final TIntObjectIterator<TableParkLevel> getParkLevelByIterator() {
+        return gParkLevelMap.iterator();
+    }
+    private static ArrayList<TableReward> gRewardArray = null;
+    private static TIntObjectHashMap<TableReward> gRewardMap = new TIntObjectHashMap<TableReward>();
+
+    private static boolean initTableReward() {
+        try {
+            gRewardMap.clear();
+            gRewardArray = TableUtility.LoadJsonTable("Reward.json", TableReward.class);
+            for (TableReward table : gRewardArray) {
+                gRewardMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableReward getRewardByID(int nKey){
+        return gRewardMap.get(nKey);
+    }
+
+    public static final TableReward getRewardByIndex(int nIdx){
+        return gRewardArray.get(nIdx);
+    }
+
+    public static final int getRewardSize(){
+        return gRewardArray.size();
+    }
+
+    public static final TIntObjectIterator<TableReward> getRewardByIterator() {
+        return gRewardMap.iterator();
+    }
+    private static ArrayList<TableReward> gRewardArray = null;
+    private static TIntObjectHashMap<TableReward> gRewardMap = new TIntObjectHashMap<TableReward>();
+
+    private static boolean initTableReward() {
+        try {
+            gRewardMap.clear();
+            gRewardArray = TableUtility.LoadJsonTable("Reward.json", TableReward.class);
+            for (TableReward table : gRewardArray) {
+                gRewardMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableReward getRewardByID(int nKey){
+        return gRewardMap.get(nKey);
+    }
+
+    public static final TableReward getRewardByIndex(int nIdx){
+        return gRewardArray.get(nIdx);
+    }
+
+    public static final int getRewardSize(){
+        return gRewardArray.size();
+    }
+
+    public static final TIntObjectIterator<TableReward> getRewardByIterator() {
+        return gRewardMap.iterator();
+    }
+    private static ArrayList<TableSceneClass> gSceneClassArray = null;
+    private static TIntObjectHashMap<TableSceneClass> gSceneClassMap = new TIntObjectHashMap<TableSceneClass>();
+
+    private static boolean initTableSceneClass() {
+        try {
+            gSceneClassMap.clear();
+            gSceneClassArray = TableUtility.LoadJsonTable("SceneClass.json", TableSceneClass.class);
+            for (TableSceneClass table : gSceneClassArray) {
+                gSceneClassMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableSceneClass getSceneClassByID(int nKey){
+        return gSceneClassMap.get(nKey);
+    }
+
+    public static final TableSceneClass getSceneClassByIndex(int nIdx){
+        return gSceneClassArray.get(nIdx);
+    }
+
+    public static final int getSceneClassSize(){
+        return gSceneClassArray.size();
+    }
+
+    public static final TIntObjectIterator<TableSceneClass> getSceneClassByIterator() {
+        return gSceneClassMap.iterator();
+    }
+    private static ArrayList<TableSceneClass> gSceneClassArray = null;
+    private static TIntObjectHashMap<TableSceneClass> gSceneClassMap = new TIntObjectHashMap<TableSceneClass>();
+
+    private static boolean initTableSceneClass() {
+        try {
+            gSceneClassMap.clear();
+            gSceneClassArray = TableUtility.LoadJsonTable("SceneClass.json", TableSceneClass.class);
+            for (TableSceneClass table : gSceneClassArray) {
+                gSceneClassMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableSceneClass getSceneClassByID(int nKey){
+        return gSceneClassMap.get(nKey);
+    }
+
+    public static final TableSceneClass getSceneClassByIndex(int nIdx){
+        return gSceneClassArray.get(nIdx);
+    }
+
+    public static final int getSceneClassSize(){
+        return gSceneClassArray.size();
+    }
+
+    public static final TIntObjectIterator<TableSceneClass> getSceneClassByIterator() {
+        return gSceneClassMap.iterator();
+    }
+    private static ArrayList<TableStringDictionary> gStringDictionaryArray = null;
+    private static TIntObjectHashMap<TableStringDictionary> gStringDictionaryMap = new TIntObjectHashMap<TableStringDictionary>();
+
+    private static boolean initTableStringDictionary() {
+        try {
+            gStringDictionaryMap.clear();
+            gStringDictionaryArray = TableUtility.LoadJsonTable("StringDictionary.json", TableStringDictionary.class);
+            for (TableStringDictionary table : gStringDictionaryArray) {
+                gStringDictionaryMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableStringDictionary getStringDictionaryByID(int nKey){
+        return gStringDictionaryMap.get(nKey);
+    }
+
+    public static final TableStringDictionary getStringDictionaryByIndex(int nIdx){
+        return gStringDictionaryArray.get(nIdx);
+    }
+
+    public static final int getStringDictionarySize(){
+        return gStringDictionaryArray.size();
+    }
+
+    public static final TIntObjectIterator<TableStringDictionary> getStringDictionaryByIterator() {
+        return gStringDictionaryMap.iterator();
+    }
+    private static ArrayList<TableStringDictionary> gStringDictionaryArray = null;
+    private static TIntObjectHashMap<TableStringDictionary> gStringDictionaryMap = new TIntObjectHashMap<TableStringDictionary>();
+
+    private static boolean initTableStringDictionary() {
+        try {
+            gStringDictionaryMap.clear();
+            gStringDictionaryArray = TableUtility.LoadJsonTable("StringDictionary.json", TableStringDictionary.class);
+            for (TableStringDictionary table : gStringDictionaryArray) {
+                gStringDictionaryMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableStringDictionary getStringDictionaryByID(int nKey){
+        return gStringDictionaryMap.get(nKey);
+    }
+
+    public static final TableStringDictionary getStringDictionaryByIndex(int nIdx){
+        return gStringDictionaryArray.get(nIdx);
+    }
+
+    public static final int getStringDictionarySize(){
+        return gStringDictionaryArray.size();
+    }
+
+    public static final TIntObjectIterator<TableStringDictionary> getStringDictionaryByIterator() {
+        return gStringDictionaryMap.iterator();
+    }
+    private static ArrayList<TableTerrain> gTerrainArray = null;
+    private static TIntObjectHashMap<TableTerrain> gTerrainMap = new TIntObjectHashMap<TableTerrain>();
+
+    private static boolean initTableTerrain() {
+        try {
+            gTerrainMap.clear();
+            gTerrainArray = TableUtility.LoadJsonTable("Terrain.json", TableTerrain.class);
+            for (TableTerrain table : gTerrainArray) {
+                gTerrainMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableTerrain getTerrainByID(int nKey){
+        return gTerrainMap.get(nKey);
+    }
+
+    public static final TableTerrain getTerrainByIndex(int nIdx){
+        return gTerrainArray.get(nIdx);
+    }
+
+    public static final int getTerrainSize(){
+        return gTerrainArray.size();
+    }
+
+    public static final TIntObjectIterator<TableTerrain> getTerrainByIterator() {
+        return gTerrainMap.iterator();
+    }
+    private static ArrayList<TableTerrain> gTerrainArray = null;
+    private static TIntObjectHashMap<TableTerrain> gTerrainMap = new TIntObjectHashMap<TableTerrain>();
+
+    private static boolean initTableTerrain() {
+        try {
+            gTerrainMap.clear();
+            gTerrainArray = TableUtility.LoadJsonTable("Terrain.json", TableTerrain.class);
+            for (TableTerrain table : gTerrainArray) {
+                gTerrainMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableTerrain getTerrainByID(int nKey){
+        return gTerrainMap.get(nKey);
+    }
+
+    public static final TableTerrain getTerrainByIndex(int nIdx){
+        return gTerrainArray.get(nIdx);
+    }
+
+    public static final int getTerrainSize(){
+        return gTerrainArray.size();
+    }
+
+    public static final TIntObjectIterator<TableTerrain> getTerrainByIterator() {
+        return gTerrainMap.iterator();
+    }
+    private static ArrayList<TableWorker> gWorkerArray = null;
+    private static TIntObjectHashMap<TableWorker> gWorkerMap = new TIntObjectHashMap<TableWorker>();
+
+    private static boolean initTableWorker() {
+        try {
+            gWorkerMap.clear();
+            gWorkerArray = TableUtility.LoadJsonTable("Worker.json", TableWorker.class);
+            for (TableWorker table : gWorkerArray) {
+                gWorkerMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableWorker getWorkerByID(int nKey){
+        return gWorkerMap.get(nKey);
+    }
+
+    public static final TableWorker getWorkerByIndex(int nIdx){
+        return gWorkerArray.get(nIdx);
+    }
+
+    public static final int getWorkerSize(){
+        return gWorkerArray.size();
+    }
+
+    public static final TIntObjectIterator<TableWorker> getWorkerByIterator() {
+        return gWorkerMap.iterator();
+    }
+    private static ArrayList<TableWorker> gWorkerArray = null;
+    private static TIntObjectHashMap<TableWorker> gWorkerMap = new TIntObjectHashMap<TableWorker>();
+
+    private static boolean initTableWorker() {
+        try {
+            gWorkerMap.clear();
+            gWorkerArray = TableUtility.LoadJsonTable("Worker.json", TableWorker.class);
+            for (TableWorker table : gWorkerArray) {
+                gWorkerMap.put(table.getId(), table);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static final TableWorker getWorkerByID(int nKey){
+        return gWorkerMap.get(nKey);
+    }
+
+    public static final TableWorker getWorkerByIndex(int nIdx){
+        return gWorkerArray.get(nIdx);
+    }
+
+    public static final int getWorkerSize(){
+        return gWorkerArray.size();
+    }
+
+    public static final TIntObjectIterator<TableWorker> getWorkerByIterator() {
+        return gWorkerMap.iterator();
+    }
 
 
     public static boolean initTable(){
@@ -806,6 +1510,94 @@ public class TableManager {
         }
         if (!initTableGameLevels()){
            logger.error("load table GameLevels error!");
+           return false;
+        }
+        if (!initTableLevelAward()){
+           logger.error("load table LevelAward error!");
+           return false;
+        }
+        if (!initTableLevelAward()){
+           logger.error("load table LevelAward error!");
+           return false;
+        }
+        if (!initTableLevelTarget()){
+           logger.error("load table LevelTarget error!");
+           return false;
+        }
+        if (!initTableLevelTarget()){
+           logger.error("load table LevelTarget error!");
+           return false;
+        }
+        if (!initTableMissionList()){
+           logger.error("load table MissionList error!");
+           return false;
+        }
+        if (!initTableMissionList()){
+           logger.error("load table MissionList error!");
+           return false;
+        }
+        if (!initTableMoFangProduceItem()){
+           logger.error("load table MoFangProduceItem error!");
+           return false;
+        }
+        if (!initTableMoFangProduceItem()){
+           logger.error("load table MoFangProduceItem error!");
+           return false;
+        }
+        if (!initTableMultipleDispleScoreRatio()){
+           logger.error("load table MultipleDispleScoreRatio error!");
+           return false;
+        }
+        if (!initTableMultipleDispleScoreRatio()){
+           logger.error("load table MultipleDispleScoreRatio error!");
+           return false;
+        }
+        if (!initTableParkLevel()){
+           logger.error("load table ParkLevel error!");
+           return false;
+        }
+        if (!initTableParkLevel()){
+           logger.error("load table ParkLevel error!");
+           return false;
+        }
+        if (!initTableReward()){
+           logger.error("load table Reward error!");
+           return false;
+        }
+        if (!initTableReward()){
+           logger.error("load table Reward error!");
+           return false;
+        }
+        if (!initTableSceneClass()){
+           logger.error("load table SceneClass error!");
+           return false;
+        }
+        if (!initTableSceneClass()){
+           logger.error("load table SceneClass error!");
+           return false;
+        }
+        if (!initTableStringDictionary()){
+           logger.error("load table StringDictionary error!");
+           return false;
+        }
+        if (!initTableStringDictionary()){
+           logger.error("load table StringDictionary error!");
+           return false;
+        }
+        if (!initTableTerrain()){
+           logger.error("load table Terrain error!");
+           return false;
+        }
+        if (!initTableTerrain()){
+           logger.error("load table Terrain error!");
+           return false;
+        }
+        if (!initTableWorker()){
+           logger.error("load table Worker error!");
+           return false;
+        }
+        if (!initTableWorker()){
+           logger.error("load table Worker error!");
            return false;
         }
 

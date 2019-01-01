@@ -44,7 +44,6 @@ D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\N
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\NPOI.OpenXml4Net.dll
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\NPOI.OpenXmlFormats.dll
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\bin\Debug\ICSharpCode.SharpZipLib.xml
-D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csprojAssemblyReference.cache
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.Properties.Resources.resources
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.Form1.resources
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csproj.GenerateResource.cache
@@ -52,3 +51,4 @@ D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\E
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csproj.CopyComplete
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.exe
 D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.pdb
+D:\ProgramCode\ExcelToFlatBuffer\ExcelToFlatBuffer\ExcelToFlatBuffer\obj\Debug\ExcelToFlatBuffer.csprojAssemblyReference.cache

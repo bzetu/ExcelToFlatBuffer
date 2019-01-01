@@ -4,34 +4,36 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableEagleChickMapConfig {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("HenRootPos")
-     private int mHenRootPos;
-     @JsonProperty("EyasTotalCount")
-     private int mEyasTotalCount;
-     @JsonProperty("EyasMaxCount")
-     private int mEyasMaxCount;
-     @JsonProperty("EyasStartPosGroup")
-     private int mEyasStartPosGroup;
+     private String mDesc;
+     @JsonProperty("Henrootpos")
+     private String mHenrootpos;
+     @JsonProperty("Eyastotalcount")
+     private int mEyastotalcount;
+     @JsonProperty("Eyasmaxcount")
+     private int mEyasmaxcount;
+     @JsonProperty("Eyasstartposgroup")
+     private String mEyasstartposgroup;
 
 
      //#关卡ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //母鸡初始位置（暂时废弃）     
-     public int getHenRootPos(){return this.mHenRootPos;}
+     public String getHenrootpos(){return this.mHenrootpos;}
      //小鹰总数     
-     public int getEyasTotalCount(){return this.mEyasTotalCount;}
+     public int getEyastotalcount(){return this.mEyastotalcount;}
      //小鹰同时出现的最大数量     
-     public int getEyasMaxCount(){return this.mEyasMaxCount;}
+     public int getEyasmaxcount(){return this.mEyasmaxcount;}
      //小鹰开始出生的位置，需要和出生点对应，不填默认为所有出生点都出生     
-     public int getEyasStartPosGroup(){return this.mEyasStartPosGroup;}
+     public String getEyasstartposgroup(){return this.mEyasstartposgroup;}
 
 
 }

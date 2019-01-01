@@ -4,42 +4,44 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableBuildingLevel {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("BuildingId")
-     private int mBuildingId;
-     @JsonProperty("BuildLevel")
-     private int mBuildLevel;
-     @JsonProperty("CostGold")
-     private int mCostGold;
+     private String mDesc;
+     @JsonProperty("Buildingid")
+     private int mBuildingid;
+     @JsonProperty("Buildlevel")
+     private int mBuildlevel;
+     @JsonProperty("Costgold")
+     private int mCostgold;
      @JsonProperty("Income")
-     private int mIncome;
+     private float mIncome;
      @JsonProperty("Limit")
      private int mLimit;
      @JsonProperty("Name")
-     private int mName;
+     private String mName;
 
 
      //#ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //建筑ID（building表中的ID）     
-     public int getBuildingId(){return this.mBuildingId;}
+     public int getBuildingid(){return this.mBuildingid;}
      //建筑等级     
-     public int getBuildLevel(){return this.mBuildLevel;}
+     public int getBuildlevel(){return this.mBuildlevel;}
      //升级花费金币     
-     public int getCostGold(){return this.mCostGold;}
+     public int getCostgold(){return this.mCostgold;}
      //产出加成（0.1表示10%)     
-     public int getIncome(){return this.mIncome;}
+     public float getIncome(){return this.mIncome;}
      //游乐园等级限制(达到对应等级建筑才可以升级）     
      public int getLimit(){return this.mLimit;}
      //建筑名字     
-     public int getName(){return this.mName;}
+     public String getName(){return this.mName;}
 
 
 }

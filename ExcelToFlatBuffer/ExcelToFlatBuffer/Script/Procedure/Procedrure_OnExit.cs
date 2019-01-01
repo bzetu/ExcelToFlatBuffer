@@ -10,30 +10,31 @@ namespace ExcelToFlatBuffer
     {
         public void Produce_OnExit()
         {
-            var result = MessageBox.Show("生成成功!", "提示", MessageBoxButtons.OK);
-
-            string outCodePath = ProSetting.Instance.GetCurOutFlatBufferCodePath();
-            string outBytesPath = ProSetting.Instance.GetCurOutByteFilePath();
+            string outCodePath = UserSetting.Instance.GetCurOutFlatBufferCodePath();
+            string outBytesPath = UserSetting.Instance.GetCurOutByteFilePath();
 
             Tools.DeleteFilesWithoutFolder(outCodePath);
             Tools.DeleteFilesWithoutFolder(outBytesPath);
 
-            if (ProSetting.Instance.GetCurUseType() == UseType.Server)
-            {
-                Tools.CopyDirectory(Setting.GenJavaServerJsonCodePath, outCodePath);
-                Tools.CopyDirectory(Setting.GenServerJavaJsonFilePath, outBytesPath);
-            }
-            else
-            {
-                Tools.CopyDirectory(Setting.GenerateFlatCodePath, outCodePath);
-                Tools.CopyDirectory(Setting.GenerateByteFilePath, outBytesPath);
-            }
-            
+            AddDelayRun(() => {
+                SchemeType scheme = Setting.GetCurSchemeType();
+                if (scheme == SchemeType.Client_CSharp_To_FlatBuffer)
+                {
+                    Tools.CopyDirectory(Setting.GenerateFlatCodePath, outCodePath);
+                    Tools.CopyDirectory(Setting.GenerateByteFilePath, outBytesPath);
+                }
+                else if (scheme == SchemeType.Server_Java_To_Json)
+                {
+                    Tools.CopyDirectory(Setting.GenJavaServerJsonCodePath, outCodePath);
+                    Tools.CopyDirectory(Setting.GenServerJavaJsonFilePath, outBytesPath);
+                }
 
-            if (result == DialogResult.OK)
-            {
-                Program.Exit();
-            }
+                var result = MessageBox.Show("生成成功!", "提示", MessageBoxButtons.OK);
+                if (result == DialogResult.OK)
+                {
+                    Program.Exit();
+                }
+            });
         }
     }
 }

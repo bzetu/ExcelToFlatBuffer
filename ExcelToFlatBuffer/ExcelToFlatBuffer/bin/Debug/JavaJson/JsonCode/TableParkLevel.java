@@ -4,28 +4,22 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableParkLevel {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("NeedExp")
-     private int mNeedExp;
-     @JsonProperty("AddExp")
-     private int mAddExp;
-     @JsonProperty("BoxRequire:0")
-     private int mBoxRequire:0;
-     @JsonProperty("BoxRequire:1")
-     private int mBoxRequire:1;
-     @JsonProperty("BoxRequire:2")
-     private int mBoxRequire:2;
-     @JsonProperty("BoxReward:0")
-     private int mBoxReward:0;
-     @JsonProperty("BoxReward:1")
-     private int mBoxReward:1;
-     @JsonProperty("BoxReward:2")
-     private int mBoxReward:2;
+     private String mDesc;
+     @JsonProperty("Needexp")
+     private int mNeedexp;
+     @JsonProperty("Addexp")
+     private int mAddexp;
+     @JsonProperty("Boxrequire")
+     private List<Integer> mBoxrequire;
+     @JsonProperty("Boxreward")
+     private List<Integer> mBoxreward;
      @JsonProperty("Income")
      private int mIncome;
      @JsonProperty("Max")
@@ -33,25 +27,17 @@ public class TableLevelTarget {
 
 
      //#游乐园等级     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //升级累计经验     
-     public int getNeedExp(){return this.mNeedExp;}
+     public int getNeedexp(){return this.mNeedexp;}
      //升级所需经验     
-     public int getAddExp(){return this.mAddExp;}
+     public int getAddexp(){return this.mAddexp;}
      //宝箱1所需经验     
-     public int getBoxRequire:0(){return this.mBoxRequire:0;}
-     //宝箱2所需经验     
-     public int getBoxRequire:1(){return this.mBoxRequire:1;}
-     //宝箱3所需经验     
-     public int getBoxRequire:2(){return this.mBoxRequire:2;}
+     public List<Integer> getBoxrequire(){return this.mBoxrequire;}
      //宝箱1奖励（对应Reward.txt表）     
-     public int getBoxReward:0(){return this.mBoxReward:0;}
-     //宝箱2奖励（对应Reward.txt表）     
-     public int getBoxReward:1(){return this.mBoxReward:1;}
-     //宝箱3奖励（对应Reward.txt表）     
-     public int getBoxReward:2(){return this.mBoxReward:2;}
+     public List<Integer> getBoxreward(){return this.mBoxreward;}
      //对所有建筑产出加成     
      public int getIncome(){return this.mIncome;}
      //收集金币最大上限     

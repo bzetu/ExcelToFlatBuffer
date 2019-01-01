@@ -20,7 +20,7 @@ namespace ExcelToFlatBuffer
 
         public bool Procedure_ReadExcel()
         {
-            string ExcelPath = ProSetting.Instance.GetCurExcelPath();
+            string ExcelPath = UserSetting.Instance.GetCurExcelPath();
             if (string.IsNullOrEmpty(ExcelPath))
             {
                 Debug.Log("找不到Excel路径");
@@ -150,11 +150,15 @@ namespace ExcelToFlatBuffer
                 }
                 AddDelayRun(() =>
                 {
-                    //Console.WriteLine(excelData.KeyValueString);
-                    if (ProSetting.Instance.GetCurUseType() == UseType.Server)
-                        Procedure_OnDealSingleExcel(excelData);
-                    else
+                    SchemeType scheme = Setting.GetCurSchemeType();
+                    if (scheme == SchemeType.Client_CSharp_To_FlatBuffer)
+                    {
                         Proceduree_GenerateFbs(excelData);
+                    }
+                    else if(scheme == SchemeType.Server_Java_To_Json)
+                    {
+                        Procedure_OnDealSingleExcel(excelData);
+                    }
                 });
             }
             catch (Exception error)

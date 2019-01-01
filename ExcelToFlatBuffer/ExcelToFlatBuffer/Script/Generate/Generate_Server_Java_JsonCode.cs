@@ -14,13 +14,41 @@ namespace ExcelToFlatBuffer
             string singleCode2 = "";
             List<string> rowList = excelData.GetRowData(0);
             List<string> desList = excelData.GetRowData(2);
+            string lastWordName = "";
             for (int i = 0; i < rowList.Count; i++)
             {
-                string typeName = rowList[i];
-                singleCode1 += string.Format(Template_Server_Java_Json.Template_SingleTableCodeWord, typeName,typeName);
-                singleCode2 += string.Format(Template_Server_Java_Json.Template_SingleTableCodeWordGet, desList[i],typeName, typeName);
+                string typeName = excelData.GetTypeName(i);
+                string wordName = excelData.GetWordName(i);
+                string desStr = desList[i];
+                if (string.IsNullOrEmpty(desStr))
+                    desStr = "该字段未添加注释";
+
+                bool isArray = false;
+                if (wordName.Contains(":"))
+                {
+                    wordName = wordName.Split(':')[0];
+                    isArray = true;
+                }
+                if (!lastWordName.Equals(wordName))
+                {
+                    if (typeName == "string")
+                        typeName = "String";
+                    if (typeName == "bool")
+                        typeName = "boolean";
+                    if (isArray)
+                    {
+                        if (typeName == "int")
+                            typeName = "List<Integer>";
+                        else
+                            typeName = string.Format(@"List<{0}>", typeName);
+                    }
+                    singleCode1 += string.Format(Template_Server_Java_Json.Template_SingleTableCodeWord, wordName, typeName, wordName);
+                    singleCode2 += string.Format(Template_Server_Java_Json.Template_SingleTableCodeWordGet, desStr, typeName, wordName, wordName);
+                    lastWordName = wordName;
+                }
+                
             }
-            string codeFileContent = string.Format(Template_Server_Java_Json.Template_SingleTableCode, singleCode1, singleCode2);
+            string codeFileContent = string.Format(Template_Server_Java_Json.Template_SingleTableCode,excelData.Name, singleCode1, singleCode2);
             string JsonFilePath = System.IO.Path.Combine(Setting.GenJavaServerJsonCodePath, "Table" + excelData.Name + ".java");
             if (Tools.GenerateFile(codeFileContent, JsonFilePath))
             {

@@ -4,44 +4,46 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableWorker {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("NeedBuildLevel")
-     private int mNeedBuildLevel;
-     @JsonProperty("BuyCost")
-     private int mBuyCost;
+     private String mDesc;
+     @JsonProperty("Needbuildlevel")
+     private int mNeedbuildlevel;
+     @JsonProperty("Buycost")
+     private int mBuycost;
      @JsonProperty("Income")
      private int mIncome;
      @JsonProperty("Person")
      private int mPerson;
-     @JsonProperty("AI")
-     private int mAI;
+     @JsonProperty("Ai")
+     private int mAi;
      @JsonProperty("Name")
-     private int mName;
+     private String mName;
      @JsonProperty("Model")
      private int mModel;
 
 
      //#ID     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //描述(不读)     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //解锁时需要的建筑等级要求     
-     public int getNeedBuildLevel(){return this.mNeedBuildLevel;}
+     public int getNeedbuildlevel(){return this.mNeedbuildlevel;}
      //解锁工人时花费的金币数     
-     public int getBuyCost(){return this.mBuyCost;}
+     public int getBuycost(){return this.mBuycost;}
      //产出加成（金币/小时）     
      public int getIncome(){return this.mIncome;}
      //人物形象     
      public int getPerson(){return this.mPerson;}
      //AI行为     
-     public int getAI(){return this.mAI;}
+     public int getAi(){return this.mAi;}
      //工人名字     
-     public int getName(){return this.mName;}
+     public String getName(){return this.mName;}
      //状态的模型Id     
      public int getModel(){return this.mModel;}
 

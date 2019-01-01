@@ -1,0 +1,7 @@
+[
+{"Id": 1,"Desc": "工人1","Needbuildlevel": 1,"Buycost": 1000,"Income": 5000,"Person": 1,"Ai": 5,"Name": "搬运工","Model": 59005},
+{"Id": 2,"Desc": "工人2","Needbuildlevel": 2,"Buycost": 2000,"Income": 10000,"Person": 2,"Ai": 5,"Name": "清洁工","Model": 59006},
+{"Id": 3,"Desc": "工人3","Needbuildlevel": 3,"Buycost": 3000,"Income": 15000,"Person": 3,"Ai": 5,"Name": "维修工","Model": 59007},
+{"Id": 4,"Desc": "工人4","Needbuildlevel": 4,"Buycost": 4000,"Income": 20000,"Person": 4,"Ai": 5,"Name": "研究员","Model": 59008},
+{"Id": 5,"Desc": "工人5","Needbuildlevel": 5,"Buycost": 5000,"Income": 25000,"Person": 5,"Ai": 5,"Name": "产品经理","Model": 59009}
+]

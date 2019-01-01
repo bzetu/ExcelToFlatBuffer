@@ -4,42 +4,24 @@ package com.cyou.fusion.table.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TableLevelTarget {
+import java.util.List;
 
-     @JsonProperty("#Id")
-     private int m#Id;
+public class TableMoFangProduceItem {
+
+     @JsonProperty("Id")
+     private int mId;
      @JsonProperty("Desc")
-     private int mDesc;
-     @JsonProperty("ItemWeight:0")
-     private int mItemWeight:0;
-     @JsonProperty("ItemWeight:1")
-     private int mItemWeight:1;
-     @JsonProperty("ItemWeight:2")
-     private int mItemWeight:2;
-     @JsonProperty("ItemWeight:3")
-     private int mItemWeight:3;
-     @JsonProperty("ItemWeight:4")
-     private int mItemWeight:4;
-     @JsonProperty("ItemWeight:5")
-     private int mItemWeight:5;
+     private String mDesc;
+     @JsonProperty("Itemweight")
+     private List<String> mItemweight;
 
 
      //#生成道具Id     
-     public int get#Id(){return this.m#Id;}
+     public int getId(){return this.mId;}
      //程序不读     
-     public int getDesc(){return this.mDesc;}
+     public String getDesc(){return this.mDesc;}
      //道具1（|道具ID:道具权重|0:1000表示道具表的0号道具和它占权重比1000）     
-     public int getItemWeight:0(){return this.mItemWeight:0;}
-     //道具2     
-     public int getItemWeight:1(){return this.mItemWeight:1;}
-     //道具3     
-     public int getItemWeight:2(){return this.mItemWeight:2;}
-     //道具4     
-     public int getItemWeight:3(){return this.mItemWeight:3;}
-     //道具5     
-     public int getItemWeight:4(){return this.mItemWeight:4;}
-     //道具6     
-     public int getItemWeight:5(){return this.mItemWeight:5;}
+     public List<String> getItemweight(){return this.mItemweight;}
 
 
 }
